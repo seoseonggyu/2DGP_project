@@ -1,18 +1,7 @@
 from pico2d import *
+open_canvas(1200,800)
 
-MAP1_WIDTH, MAP1_HEIGHT = 564, 818
-open_canvas(500,500)
-walking = load_image('walking_sheet.png')
-map1 = load_image('map1.jpg')
 
-dir = 0
-dir2 = 0
-move = False
-running = True
-x = 70
-y = 818-90
-frame = 0
-way = 0
 
 
 def handle_events():
@@ -105,26 +94,26 @@ def handle_events():
                     move = False
 
 def map_events():
-    map1.draw(x, y)
+    map1.draw(600, 400)
 
 if __name__ == "__main__":
     while running:
         if move == True:
             clear_canvas()
-            map_events()
-            walking.clip_draw(frame * 40, 42 * way, 40, 42, x, y, 50, 50)
+            # map_events()
+            walking.clip_draw(frame * 40, 42 * way, 40, 42, x, y, 120, 120)
             update_canvas()
             handle_events()
             frame = (frame + 1) % 6
-            x += dir * 5
-            y += dir2 * 5
+            x += dir * 12
+            y += dir2 * 12
         else:
             clear_canvas()
-            map1.draw(MAP1_WIDTH // 2, MAP1_HEIGHT // 2)
-            walking.clip_draw(frame * 40, 42 * way, 40, 42, x, y, 50, 50)
+            # map1.draw(MAP1_WIDTH // 2, MAP1_HEIGHT // 2)
+            walking.clip_draw(frame * 40, 42 * way, 40, 42, x, y, 120, 120)
             update_canvas()
             handle_events()
 
-        delay(0.03)
+        delay(0.05)
 
     close_canvas()
