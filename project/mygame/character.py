@@ -1,5 +1,6 @@
 import pico2d
 import game_framework
+import time
 import title_state
 import logo_state
 
@@ -28,12 +29,31 @@ class character:
         self.image.clip_draw(self.frame * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
+class bullet:
+    def __init__(self, mousex, mousey, posx, posy):
+        self.bullet_x, self.bullet_y = mousex, mousey
+        self.shot = pico2d.load_image('bullet.png')
+        self.speed = 0
+        self.hero_x, self.hero_y = posx, posy  # 캐릭터 위치
+
+        self.x, self.y = 0, 0
+
+    def update(self):
+        self.speed += 0.002
+        self.x = (1 - self.speed) * self.hero_x + self.speed * self.bullet_x
+        self.y = (1 - self.speed) * self.hero_y + self.speed * self.bullet_y
+
+
+    def draw(self):
+        self.shot.clip_draw(0, 0 , 40, 42, self.x, self.y)
+
 dir = 0
 dir2 = 0
 way = 0
 frame = 0
 move = True
-mouse_x, mouse_y = 600, 400
+bulletXY = []
+mouse_x, mouse_y = 600, 400 # 마우스
 
 def handle_events():
     global dir
@@ -42,12 +62,18 @@ def handle_events():
     global frame
     global move
     global mouse_x, mouse_y
+
     events = pico2d.get_events()
     for event in events:
         if event.type == pico2d.SDL_QUIT:
             game_framework.quit()
         if event.type == pico2d.SDL_MOUSEMOTION: # 마우스
             mouse_x, mouse_y = event.x, 800 - 1 - event.y
+
+        if event.type == pico2d.SDL_MOUSEBUTTONDOWN:
+            if event.button == pico2d.SDL_BUTTON_LEFT:
+                mouse_x, mouse_y = event.x, 800 - 1 - event.y
+                bulletXY.append(bullet(mouse_x, mouse_y, hero.x, hero.y))
 
         if event.type == pico2d.SDL_KEYDOWN: # 캐릭터 이동
             move = True
@@ -65,6 +91,7 @@ def handle_events():
             if event.key == pico2d.SDLK_s:
                 dir2 -= 1
                 way = 5
+
             if dir > 0 and dir2 > 0:
                 way = 2
             if dir < 0 and dir2 > 0:
@@ -144,7 +171,9 @@ def update():
     global way
     global move
     global frame
+    global bulletXY
     global mouse_x, mouse_x
+
 
     pico2d.hide_cursor()
     hero.dir = dir
@@ -153,6 +182,7 @@ def update():
     hero.mouse_x = mouse_x
     hero.mouse_y = mouse_y
 
+    # bullet.hero_x, bullet.hero_y = hero.x, hero.y
     if move == True:
         hero.update()
 
@@ -160,8 +190,15 @@ def update():
         hero.frame = frame
         hero.update2()
 
+    for bullets in bulletXY[:]:
+        bullets.update()
+
+
+
 # 월드를 그린다
 def draw():
     pico2d.clear_canvas()
     hero.draw()
+    for bullets in bulletXY[:]:
+        bullets.draw()
     pico2d.update_canvas()
