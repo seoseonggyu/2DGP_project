@@ -15,6 +15,7 @@ class character:
         self.dir2 = 0
         self.image = pico2d.load_image('character_sheet.png')
         self.cursor = pico2d.load_image('gun_cursor.png')
+        self.life = pico2d.load_image('life.png')
 
     def update(self):
         self.frame = (self.frame + 1) % 6
@@ -47,32 +48,38 @@ class bullet:
     def draw(self):
         self.shot.clip_draw(0, 0, 40, 42, self.x, self.y)
 
-class Stage1:
-    def __init__(self):
-        self.image = pico2d.load_image('stage1.png')
-
-    def draw(self):
-        self.image.draw(600, 400)
-
 class Life:
-    def __init__(self):
+    def __init__(self, posx, posy):
         self.life = pico2d.load_image('life.png')
+        self.x = posx
+        self.y = posy
 
     def update(self):
         pass
 
     def draw(self):
-        self.life.draw(100, 700)
+        self.life.draw(self.x, self.y, 50, 50)
 
+class Stage1:
+    def __init__(self):
+        self.stage1_image = pico2d.load_image('stage1.png')
+    def draw(self):
+        self.stage1_image.draw(600, 400, 1200, 800)
+
+# 캐릭터 관련
 dir = 0
 dir2 = 0
 way = 0
 frame = 0
 move = True
-
-bulletXY = []
-life = [Life() for i in range(3)]
 mouse_x, mouse_y = 600, 400 # 마우스
+
+# 총알 관련
+bulletXY = []
+
+# 생명 관련
+life = []
+
 
 def handle_events():
     global dir
@@ -174,17 +181,19 @@ def handle_events():
 
 hero = None
 stage1 = None
+life = None
 
 # 초기화
 def enter():
-    global hero, stage1
+    global hero, stage1, life
     hero = character()
+    life = [Life(50, 750), Life(100, 750), Life(150, 750)]
     stage1 = Stage1()
 
 # 종료
 def exit():
-    global hero, stage1
-    del hero, stage1
+    global hero, stage1, life
+    del hero, stage1, life
 
 # 월드에 존재하는 객체들을 업데이트
 def update():
@@ -204,7 +213,6 @@ def update():
     hero.mouse_x = mouse_x
     hero.mouse_y = mouse_y
 
-    # bullet.hero_x, bullet.hero_y = hero.x, hero.y
     if move == True:
         hero.update()
 
@@ -215,18 +223,24 @@ def update():
     for bullets in bulletXY[:]:
         bullets.update()
 
+    if len(bulletXY) != 0:
+        for i, bxy in enumerate(bulletXY):
+            if bxy.x <= 50 or bxy.x >= 1150 or bxy.y <= 50 or bxy.y >= 750:
+                bulletXY.remove(bxy)
 
 
 # 월드를 그린다
 def draw():
     global bulletXY
     pico2d.clear_canvas()
-    # stage1.draw()
-    hero.draw()
+    stage1.draw() # 스테이지1
+    hero.draw() # 캐릭터
 
-    for lifes in life[:]:
-        lifes.draw()
+    # 생명 카운트
+    for i in life:
+        i.draw()
 
+    # 총알
     for bullets in bulletXY[:]:
         bullets.draw()
     pico2d.update_canvas()
