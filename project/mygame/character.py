@@ -1,8 +1,10 @@
 import pico2d
 import game_framework
-import time
+# import pygame
 import title_state
 import logo_state
+
+# pygame.init()
 
 
 class character:
@@ -45,7 +47,19 @@ class bullet:
 
 
     def draw(self):
-        self.shot.clip_draw(0, 0 , 40, 42, self.x, self.y)
+        self.shot.clip_draw(0, 0, 40, 42, self.x, self.y)
+
+class Map1:
+    def __init__(self):
+        self.stage = pico2d.load_image('stage1.png')
+        self.x, self.y = 600, 400
+    def update(self):
+        pass
+
+    def draw(self):
+        self.stage.clip_draw(0, 0, 1200, 800, self.x, self.y)
+
+
 
 dir = 0
 dir2 = 0
@@ -54,6 +68,9 @@ frame = 0
 move = True
 bulletXY = []
 mouse_x, mouse_y = 600, 400 # 마우스
+tan_x = 0
+tan_y = 0
+
 
 def handle_events():
     global dir
@@ -62,6 +79,7 @@ def handle_events():
     global frame
     global move
     global mouse_x, mouse_y
+    global tan_x, tan_y
 
     events = pico2d.get_events()
     for event in events:
@@ -153,16 +171,19 @@ def handle_events():
 
 
 hero = None
+stage1 = None
 
 # 초기화
 def enter():
-    global hero
+    global hero, stage1
     hero = character()
+    stage1 = Map1()
 
 # 종료
 def exit():
-    global hero
-    del hero
+    global hero, stage1
+
+    del hero, stage1
 
 # 월드에 존재하는 객체들을 업데이트
 def update():
@@ -193,11 +214,19 @@ def update():
     for bullets in bulletXY[:]:
         bullets.update()
 
+    if len(bulletXY) != 0:
+        for i, bxy in enumerate(bulletXY):
+            if bxy.x >= 1100 or bxy.x <= 100:
+                bulletXY.remove(bxy)
+            if bxy.y >= 700 or bxy.y <= 100:
+                bulletXY.remove(bxy)
+
 
 
 # 월드를 그린다
 def draw():
     pico2d.clear_canvas()
+    stage1.draw()
     hero.draw()
     for bullets in bulletXY[:]:
         bullets.draw()
