@@ -47,6 +47,23 @@ class bullet:
     def draw(self):
         self.shot.clip_draw(0, 0, 40, 42, self.x, self.y)
 
+class Stage1:
+    def __init__(self):
+        self.image = pico2d.load_image('stage1.png')
+
+    def draw(self):
+        self.image.draw(600, 400)
+
+class Life:
+    def __init__(self):
+        self.life = pico2d.load_image('life.png')
+
+    def update(self):
+        pass
+
+    def draw(self):
+        self.life.draw(100, 700)
+
 dir = 0
 dir2 = 0
 way = 0
@@ -54,6 +71,7 @@ frame = 0
 move = True
 
 bulletXY = []
+life = [Life() for i in range(3)]
 mouse_x, mouse_y = 600, 400 # 마우스
 
 def handle_events():
@@ -155,16 +173,18 @@ def handle_events():
 
 
 hero = None
+stage1 = None
 
 # 초기화
 def enter():
-    global hero
+    global hero, stage1
     hero = character()
+    stage1 = Stage1()
 
 # 종료
 def exit():
-    global hero
-    del hero
+    global hero, stage1
+    del hero, stage1
 
 # 월드에 존재하는 객체들을 업데이트
 def update():
@@ -201,7 +221,12 @@ def update():
 def draw():
     global bulletXY
     pico2d.clear_canvas()
+    # stage1.draw()
     hero.draw()
+
+    for lifes in life[:]:
+        lifes.draw()
+
     for bullets in bulletXY[:]:
         bullets.draw()
     pico2d.update_canvas()
