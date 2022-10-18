@@ -45,13 +45,14 @@ class bullet:
 
 
     def draw(self):
-        self.shot.clip_draw(0, 0 , 40, 42, self.x, self.y)
+        self.shot.clip_draw(0, 0, 40, 42, self.x, self.y)
 
 dir = 0
 dir2 = 0
 way = 0
 frame = 0
 move = True
+
 bulletXY = []
 mouse_x, mouse_y = 600, 400 # 마우스
 
@@ -62,6 +63,7 @@ def handle_events():
     global frame
     global move
     global mouse_x, mouse_y
+    global bulletXY
 
     events = pico2d.get_events()
     for event in events:
@@ -197,6 +199,7 @@ def update():
 
 # 월드를 그린다
 def draw():
+    global bulletXY
     pico2d.clear_canvas()
     hero.draw()
     for bullets in bulletXY[:]:
