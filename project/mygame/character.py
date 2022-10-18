@@ -23,6 +23,15 @@ class character:
         self.y += self.dir2 * 5
         pico2d.delay(0.01)
 
+        if self.x <= 0:
+            self.x = 0
+        if self.x >= 1200:
+            self.x = 1200
+        if self.y <= 0:
+            self.y = 0
+        if self.y >= 800:
+            self.y = 800
+
     def update2(self):
         pass
 
