@@ -1,7 +1,7 @@
 from pico2d import *
 
 import game_framework
-import character
+import play_state
 
 image = None
 
