@@ -17,15 +17,15 @@ FRAMES_PER_ACTION = 6
 
 
 #2 이벤트 정의
-DD, AD, WD, SD, DU, AU, WU, SU = range(8)
+DD, AD, WD, SD, DU, AU, WU, SU, DD = range(10)
 
 key_event_table = {
     (SDL_KEYDOWN, SDLK_d): DD,
     (SDL_KEYDOWN, SDLK_a): AD,
     (SDL_KEYDOWN, SDLK_w): WD,
     (SDL_KEYDOWN, SDLK_s): SD,
-    # (SDL_KEYDOWN, (SDLK_d and SDLK_w)): DD_WD,
-    # (SDL_KEYUP,   (SDLK_d and SDLK_w)): DU_WU,
+    (SDL_KEYDOWN, (SDLK_d and SDLK_w)): DD_WD,
+    (SDL_KEYUP,   (SDLK_d and SDLK_w)): DU_WU,
     (SDL_KEYUP,   SDLK_d): DU,
     (SDL_KEYUP,   SDLK_a): AU,
     (SDL_KEYUP,   SDLK_w): WU,
@@ -36,6 +36,7 @@ class IDLE:
     def enter(self, event): # 상태에 들어갈 때 행하는 액션
         print('enter idle')
         self.dir = 0
+        self.dir2 = 0
         pass
     def exit(self): # 상태를 나올 때 행하는 액션 , 고개 들기
         print('exit idle')
@@ -55,30 +56,29 @@ class RUN:
         if event == DD:
             self.way = 0
             self.dir += 1
-        if event == AD:
+        elif event == AD:
             self.way = 1
             self.dir -= 1
 
-        if event == WD:
+        elif event == WD:
             self.way = 4
             self.dir2 += 1
-            self.dir = 0
-        if event == SD:
+        elif event == SD:
             self.way = 5
             self.dir2 -= 1
 
-        if event == DU:
+        elif event == DU:
             self.way = 0
             self.dir -= 1
-        if event == AU:
+        elif event == AU:
             self.way = 1
             self.dir += 1
 
 
-        if event == WU:
+        elif event == WU:
             self.way = 4
             self.dir2 -= 1
-        if event == SU:
+        elif event == SU:
             self.way = 5
             self.dir2 += 1
 
