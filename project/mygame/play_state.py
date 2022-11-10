@@ -78,15 +78,7 @@ def handle_events():
             game_framework.quit()
         else:
             hero.handle_event(event)
-            pass
 
-        # if event.type == pico2d.SDL_MOUSEMOTION: # 마우스
-        #     mouse_x, mouse_y = event.x, 800 - 1 - event.y
-
-        # if event.type == pico2d.SDL_MOUSEBUTTONDOWN:
-        #     if event.button == pico2d.SDL_BUTTON_LEFT:
-        #         mouse_x, mouse_y = event.x, 800 - 1 - event.y
-        #         bulletXY.append(bullet(mouse_x, mouse_y, hero.x, hero.y))
 
 # stage1 = None
 # life = None
