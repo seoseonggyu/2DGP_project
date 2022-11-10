@@ -1,9 +1,10 @@
-import pico2d
+from pico2d import *
 import game_framework
+import game_world
 
 from hero import character
 from grass import Grass
-import time
+
 import title_state
 import logo_state
 
@@ -77,6 +78,7 @@ def handle_events():
             game_framework.quit()
         else:
             hero.handle_event(event)
+            pass
 
         # if event.type == pico2d.SDL_MOUSEMOTION: # 마우스
         #     mouse_x, mouse_y = event.x, 800 - 1 - event.y
@@ -88,13 +90,6 @@ def handle_events():
 
 
         # if event.type == pico2d.SDL_KEYDOWN: # 캐릭터 이동
-        #     move = True
-        #     if event.key == pico2d.SDLK_w:
-        #         dir2 += 1
-        #         way = 4
-        #     if event.key == pico2d.SDLK_s:
-        #         dir2 -= 1
-        #         way = 5
         #
         #     if dir > 0 and dir2 > 0:
         #         way = 2
@@ -163,30 +158,27 @@ def enter():
     global hero, grass #stage1, life
     hero = character()
     grass = Grass()
+    game_world.add_object(grass,0)
+    game_world.add_object(hero,1)
+
     #life = [Life(50, 750), Life(100, 750), Life(150, 750)]
     #stage1 = Stage1()
 
 # 종료
 def exit():
-    global hero, grass#, stage1, life
-    del hero, grass#, stage1, life
+    game_world.clear()
 
 # 월드에 존재하는 객체들을 업데이트
 def update():
-    hero.update()
-
-    global dir
-    global dir2
-    global way
-    global move
-    global frame
+    for game_object in game_world.all_objects():
+        game_object.update()
     # global bulletXY
     # global mouse_x, mouse_x
 
 
     # pico2d.hide_cursor()
-    hero.dir = dir
-    hero.dir2 = dir2
+    # hero.dir = dir
+    # hero.dir2 = dir2
     # hero.way = way
     # hero.mouse_x = mouse_x
     # hero.mouse_y = mouse_y
@@ -207,17 +199,17 @@ def update():
 
 
 def draw_world():
-    hero.draw()
-    grass.draw()
+    for game_object in game_world.all_objects():
+        game_object.draw()
 
 
 # 월드를 그린다
 
 
 def draw():
-    pico2d.clear_canvas()
+    clear_canvas()
     draw_world()
-    pico2d.update_canvas()
+    update_canvas()
 
     # global bulletXY
     # stage1.draw() # 스테이지1
@@ -231,3 +223,9 @@ def draw():
     # for bullets in bulletXY[:]:
     #     bullets.draw()
     # pico2d.update_canvas()
+
+def pause():
+    pass
+
+def resume():
+    pass
