@@ -88,68 +88,6 @@ def handle_events():
         #         mouse_x, mouse_y = event.x, 800 - 1 - event.y
         #         bulletXY.append(bullet(mouse_x, mouse_y, hero.x, hero.y))
 
-
-        # if event.type == pico2d.SDL_KEYDOWN: # 캐릭터 이동
-        #
-        #     if dir > 0 and dir2 > 0:
-        #         way = 2
-        #     if dir < 0 and dir2 > 0:
-        #         way = 3
-        #     if dir < 0 and dir2 < 0:
-        #         way = 1
-        #     if dir > 0 and dir2 < 0:
-        #         way = 0
-
-        # if event.type == pico2d.SDL_KEYUP:
-        #     if event.key == pico2d.SDLK_d:
-        #         if dir2 > 0:
-        #             dir -= 1
-        #             way = 4
-        #         elif dir2 < 0:
-        #             way = 5
-        #             dir -= 1
-        #         else:
-        #             way = 6
-        #             frame = 0
-        #             dir -= 1
-        #             move = False
-        #     elif event.key == pico2d.SDLK_w:
-        #         if dir > 0:
-        #             dir2 -= 1
-        #             way = 0
-        #         elif dir < 0:
-        #             dir2 -= 1
-        #             way = 1
-        #         else:
-        #             way = 6
-        #             frame = 2
-        #             dir2 -= 1
-        #             move = False
-        #     elif event.key == pico2d.SDLK_a:
-        #         if dir2 > 0:
-        #             dir += 1
-        #             way = 4
-        #         elif dir2 < 0:
-        #             way = 5
-        #             dir += 1
-        #         else:
-        #             way = 6
-        #             frame = 3
-        #             dir += 1
-        #             move = False
-        #     elif event.key == pico2d.SDLK_s:
-        #         if dir > 0:
-        #             dir2 += 1
-        #             way = 0
-        #         elif dir < 0:
-        #             dir2 += 1
-        #             way = 1
-        #         else:
-        #             way = 6
-        #             frame = 1
-        #             dir2 += 1
-        #             move = False
-
 # stage1 = None
 # life = None
 
@@ -158,8 +96,8 @@ def enter():
     global hero, grass #stage1, life
     hero = character()
     grass = Grass()
-    game_world.add_object(grass,0)
-    game_world.add_object(hero,1)
+    game_world.add_object(grass, 0)
+    game_world.add_object(hero, 1)
 
     #life = [Life(50, 750), Life(100, 750), Life(150, 750)]
     #stage1 = Stage1()
