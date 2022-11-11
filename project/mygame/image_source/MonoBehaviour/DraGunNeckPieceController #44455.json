@@ -1,0 +1,62 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -2991688000764302243
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 4390958885905949038
+  },
+  "m_Name": "",
+  "leftSprite": "neck_bottom_left_001",
+  "forwardSprite": "neck_bottom_001",
+  "rightSprite": "neck_bottom_right_001",
+  "flipThreshold": 10.0,
+  "xCurve": {
+    "m_Curve": [
+      {
+        "time": 0.0,
+        "value": 0.0,
+        "inSlope": -0.160354123,
+        "outSlope": -0.160354123
+      },
+      {
+        "time": 3.00686932,
+        "value": -0.4821639,
+        "inSlope": 0.0630115047,
+        "outSlope": 0.0630115047
+      },
+      {
+        "time": 6.0,
+        "value": 0.375000238,
+        "inSlope": 0.286377132,
+        "outSlope": 0.286377132
+      }
+    ],
+    "m_PreInfinity": 2,
+    "m_PostInfinity": 2,
+    "m_RotationOrder": 4
+  },
+  "yCurve": {
+    "m_Curve": [
+      {
+        "time": -5.0,
+        "value": 0.0178570747,
+        "inSlope": 0.0,
+        "outSlope": 0.0
+      },
+      {
+        "time": 3.99767685,
+        "value": 0.0178570747,
+        "inSlope": 0.0,
+        "outSlope": 0.0
+      }
+    ],
+    "m_PreInfinity": 2,
+    "m_PostInfinity": 2,
+    "m_RotationOrder": 4
+  },
+  "idleTime": 0.6,
+  "idleOffset": 0.0
+}

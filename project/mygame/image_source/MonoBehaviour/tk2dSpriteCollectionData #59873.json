@@ -1,0 +1,5750 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": -3028591547174678867
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 0,
+    "m_PathID": 5287704178048467122
+  },
+  "m_Name": "",
+  "version": 3,
+  "materialIdsValid": 1,
+  "needMaterialInstance": 0,
+  "spriteDefinitions": [
+    {
+      "name": "gungeon_guardian_shadow_001",
+      "boundsDataCenter": {
+        "x": 1.09375,
+        "y": 0.375,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 2.1875,
+        "y": 0.75,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 1.09375,
+        "y": 0.375,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 2.1875,
+        "y": 0.75,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 2.1875,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0,
+        "y": 0.75,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 2.1875,
+        "y": 0.75,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.236330077,
+          "y": 0.210939452
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.210939452
+        },
+        {
+          "x": 0.236330077,
+          "y": 0.234373048
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.234373048
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": 4562688427644123782
+      },
+      "materialId": 1,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_004",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.498048842
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.498048842
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.617185533
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.617185533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_003",
+      "boundsDataCenter": {
+        "x": 2.6875,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.228517577,
+          "y": 0.8945332
+        },
+        {
+          "x": 0.228517577,
+          "y": 0.9492168
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.8945332
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.9492168
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_002",
+      "boundsDataCenter": {
+        "x": 2.625,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.308595717,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.308595717,
+          "y": 0.8886699
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.8886699
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_004",
+      "boundsDataCenter": {
+        "x": 2.625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.341798842,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.3964824,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.341798842,
+          "y": 0.5039043
+        },
+        {
+          "x": 0.3964824,
+          "y": 0.5039043
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_nod_002",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.6210957
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.6210957
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.7402324
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.7402324
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.6875,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.371095717,
+          "y": 0.0898457
+        },
+        {
+          "x": 0.371095717,
+          "y": 0.142576173
+        },
+        {
+          "x": 0.5039043,
+          "y": 0.0898457
+        },
+        {
+          "x": 0.5039043,
+          "y": 0.142576173
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_point_003",
+      "boundsDataCenter": {
+        "x": 3.375,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.75,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.50000012,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.50000012,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.119138673,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.1210918
+        },
+        {
+          "x": 0.119138673,
+          "y": 0.1210918
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_002",
+      "boundsDataCenter": {
+        "x": 2.78125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 2.0625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 2.0625,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.228517577,
+          "y": 0.953126967
+        },
+        {
+          "x": 0.228517577,
+          "y": 0.9980449
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.953126967
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.9980449
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_003",
+      "boundsDataCenter": {
+        "x": 2.625,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.308595717,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.308595717,
+          "y": 0.751951158
+        },
+        {
+          "x": 0.363279283,
+          "y": 0.751951158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_003",
+      "boundsDataCenter": {
+        "x": 3.03125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 2.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 4.25,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 4.25,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.228517577,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.228517577,
+          "y": 0.751951158
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.751951158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_nod_001",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.7441426
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.7441426
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.8632793
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.8632793
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_point_004",
+      "boundsDataCenter": {
+        "x": 3.375,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.75,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.50000012,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.50000012,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.125001952
+        },
+        {
+          "x": 0.119138673,
+          "y": 0.125001952
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.244138673
+        },
+        {
+          "x": 0.119138673,
+          "y": 0.244138673
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_005",
+      "boundsDataCenter": {
+        "x": 3.46875,
+        "y": 1.9375,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.4375,
+        "y": 3.75,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.1875,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.1875,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.2304707,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.337888658,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.2304707,
+          "y": 0.488279283
+        },
+        {
+          "x": 0.337888658,
+          "y": 0.488279283
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_point_002",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.867189467
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.867189467
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.986326158
+        },
+        {
+          "x": 0.111326173,
+          "y": 0.986326158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_004",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.115236327,
+          "y": 0.498048842
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.498048842
+        },
+        {
+          "x": 0.115236327,
+          "y": 0.617185533
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.617185533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.875,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.4375,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.875,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.8945332
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.9433574
+        },
+        {
+          "x": 0.499998033,
+          "y": 0.8945332
+        },
+        {
+          "x": 0.499998033,
+          "y": 0.9433574
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_002",
+      "boundsDataCenter": {
+        "x": 2.53125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.43750024,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.25000024,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.25000024,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.419923842,
+          "y": 0.7539082
+        },
+        {
+          "x": 0.464841783,
+          "y": 0.7539082
+        },
+        {
+          "x": 0.419923842,
+          "y": 0.8886699
+        },
+        {
+          "x": 0.464841783,
+          "y": 0.8886699
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_return_001",
+      "boundsDataCenter": {
+        "x": 2.21875,
+        "y": 2.09375,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 2.6875,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.875,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.875,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.236330077,
+          "y": 0.123048827
+        },
+        {
+          "x": 0.236330077,
+          "y": 0.2070293
+        },
+        {
+          "x": 0.367185533,
+          "y": 0.123048827
+        },
+        {
+          "x": 0.367185533,
+          "y": 0.2070293
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_005",
+      "boundsDataCenter": {
+        "x": 2.6875,
+        "y": 2.15625,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.625,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.875,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.875,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.507814467,
+          "y": 0.0585957021
+        },
+        {
+          "x": 0.5585918,
+          "y": 0.0585957021
+        },
+        {
+          "x": 0.507814467,
+          "y": 0.189451173
+        },
+        {
+          "x": 0.5585918,
+          "y": 0.189451173
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.875,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.4375,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.875,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.9472676
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.9960918
+        },
+        {
+          "x": 0.499998033,
+          "y": 0.9472676
+        },
+        {
+          "x": 0.499998033,
+          "y": 0.9960918
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_005",
+      "boundsDataCenter": {
+        "x": 2.625,
+        "y": 2.15625,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.625,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.4375,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.4375,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.457033217,
+          "y": 0.339845717
+        },
+        {
+          "x": 0.507810533,
+          "y": 0.339845717
+        },
+        {
+          "x": 0.457033217,
+          "y": 0.470701158
+        },
+        {
+          "x": 0.507810533,
+          "y": 0.470701158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_point_001",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.117189452,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.226560548,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.117189452,
+          "y": 0.367185533
+        },
+        {
+          "x": 0.226560548,
+          "y": 0.367185533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_return_001",
+      "boundsDataCenter": {
+        "x": 3.09375,
+        "y": 2.09375,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 2.6875,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 4.4375,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 4.4375,
+        "y": 4.1875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.347658217,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.347658217,
+          "y": 0.08593555
+        },
+        {
+          "x": 0.478513658,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.478513658,
+          "y": 0.08593555
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_006",
+      "boundsDataCenter": {
+        "x": 2.6875,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.625,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.875,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.875,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.402345717,
+          "y": 0.203126952
+        },
+        {
+          "x": 0.453123033,
+          "y": 0.203126952
+        },
+        {
+          "x": 0.402345717,
+          "y": 0.335935533
+        },
+        {
+          "x": 0.453123033,
+          "y": 0.335935533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_002",
+      "boundsDataCenter": {
+        "x": 2.6875,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.341798842,
+          "y": 0.507814467
+        },
+        {
+          "x": 0.341798842,
+          "y": 0.562498033
+        },
+        {
+          "x": 0.4746074,
+          "y": 0.507814467
+        },
+        {
+          "x": 0.4746074,
+          "y": 0.562498033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_idle_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.6875,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.371095717,
+          "y": 0.146486327
+        },
+        {
+          "x": 0.371095717,
+          "y": 0.1992168
+        },
+        {
+          "x": 0.5039043,
+          "y": 0.146486327
+        },
+        {
+          "x": 0.5039043,
+          "y": 0.1992168
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_005",
+      "boundsDataCenter": {
+        "x": 1.84375,
+        "y": 1.9375,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.4375,
+        "y": 3.75,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.125,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.236330077,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.343748033,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.236330077,
+          "y": 0.119138673
+        },
+        {
+          "x": 0.343748033,
+          "y": 0.119138673
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_003",
+      "boundsDataCenter": {
+        "x": 2.28125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 2.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.0625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.0625,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.228517577,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.228517577,
+          "y": 0.890623033
+        },
+        {
+          "x": 0.304685533,
+          "y": 0.890623033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_004",
+      "boundsDataCenter": {
+        "x": 2.6875,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.75,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.343751967,
+          "y": 0.210939452
+        },
+        {
+          "x": 0.398435533,
+          "y": 0.210939452
+        },
+        {
+          "x": 0.343751967,
+          "y": 0.343748033
+        },
+        {
+          "x": 0.398435533,
+          "y": 0.343748033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_idle_006",
+      "boundsDataCenter": {
+        "x": 2.625,
+        "y": 2.1875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.625,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.4375,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.4375,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.457033217,
+          "y": 0.203126952
+        },
+        {
+          "x": 0.507810533,
+          "y": 0.203126952
+        },
+        {
+          "x": 0.457033217,
+          "y": 0.335935533
+        },
+        {
+          "x": 0.507810533,
+          "y": 0.335935533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 2.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 0.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_idle_003",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.117189452,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.226560548,
+          "y": 0.371095717
+        },
+        {
+          "x": 0.117189452,
+          "y": 0.4902324
+        },
+        {
+          "x": 0.226560548,
+          "y": 0.4902324
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.75,
+          "y": 1.3125,
+          "z": 0.0
+        },
+        {
+          "x": 1.75,
+          "y": 1.1875,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_006",
+      "boundsDataCenter": {
+        "x": 1.78125,
+        "y": 1.99999988,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5625,
+        "y": 3.87499976,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0,
+        "y": 3.93749976,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.93749976,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.1132793,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.369138658
+        },
+        {
+          "x": 0.1132793,
+          "y": 0.369138658
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.65625,
+          "y": 1.125,
+          "z": 0.0
+        },
+        {
+          "x": 1.65625,
+          "y": 1.0625,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_idle_004",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.123048827,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.232419923,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.123048827,
+          "y": 0.1210918
+        },
+        {
+          "x": 0.232419923,
+          "y": 0.1210918
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.75,
+          "y": 1.3125,
+          "z": 0.0
+        },
+        {
+          "x": 1.75,
+          "y": 1.1875,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_idle_001",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.123048827,
+          "y": 0.125001952
+        },
+        {
+          "x": 0.232419923,
+          "y": 0.125001952
+        },
+        {
+          "x": 0.123048827,
+          "y": 0.244138673
+        },
+        {
+          "x": 0.232419923,
+          "y": 0.244138673
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.75,
+          "y": 1.3125,
+          "z": 0.0
+        },
+        {
+          "x": 1.75,
+          "y": 1.1875,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_right_bar_idle_002",
+      "boundsDataCenter": {
+        "x": 1.8125,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 0.0625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 0.0625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.115236327,
+          "y": 0.6210957
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.6210957
+        },
+        {
+          "x": 0.115236327,
+          "y": 0.7402324
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.7402324
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 1.75,
+          "y": 1.3125,
+          "z": 0.0
+        },
+        {
+          "x": 1.75,
+          "y": 1.1875,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_idle_002",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.115236327,
+          "y": 0.7441426
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.7441426
+        },
+        {
+          "x": 0.115236327,
+          "y": 0.8632793
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.8632793
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.53125,
+          "y": 1.1875,
+          "z": 0.0
+        },
+        {
+          "x": 1.78125,
+          "y": 1.125,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_idle_003",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.115236327,
+          "y": 0.867189467
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.867189467
+        },
+        {
+          "x": 0.115236327,
+          "y": 0.986326158
+        },
+        {
+          "x": 0.224607423,
+          "y": 0.986326158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.53125,
+          "y": 1.1875,
+          "z": 0.0
+        },
+        {
+          "x": 1.78125,
+          "y": 1.125,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_006",
+      "boundsDataCenter": {
+        "x": 3.53125,
+        "y": 1.99999988,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5625,
+        "y": 3.87499976,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.3125,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.93749976,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.3125,
+        "y": 3.93749976,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.00195507822,
+          "y": 0.373048842
+        },
+        {
+          "x": 0.1132793,
+          "y": 0.373048842
+        },
+        {
+          "x": 0.00195507822,
+          "y": 0.494138658
+        },
+        {
+          "x": 0.1132793,
+          "y": 0.494138658
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.53125,
+          "y": 1.1875,
+          "z": 0.0
+        },
+        {
+          "x": 1.78125,
+          "y": 1.125,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_idle_004",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.228517577,
+          "y": 0.4941426
+        },
+        {
+          "x": 0.337888658,
+          "y": 0.4941426
+        },
+        {
+          "x": 0.228517577,
+          "y": 0.6132793
+        },
+        {
+          "x": 0.337888658,
+          "y": 0.6132793
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.53125,
+          "y": 1.1875,
+          "z": 0.0
+        },
+        {
+          "x": 1.78125,
+          "y": 1.125,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gunknight_left_bar_idle_001",
+      "boundsDataCenter": {
+        "x": 3.5,
+        "y": 1.96875,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 3.5,
+        "y": 3.8125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 5.25,
+        "y": 0.0625,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 5.25,
+        "y": 3.875,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.2304707,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.339841783,
+          "y": 0.248048827
+        },
+        {
+          "x": 0.2304707,
+          "y": 0.367185533
+        },
+        {
+          "x": 0.339841783,
+          "y": 0.367185533
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 2,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [
+        {
+          "x": 3.53125,
+          "y": 1.1875,
+          "z": 0.0
+        },
+        {
+          "x": 1.78125,
+          "y": 1.125,
+          "z": 0.1
+        }
+      ],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_right_004",
+      "boundsDataCenter": {
+        "x": 2.78125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 2.0,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 2.0,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.751951158
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.751951158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_right_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.6875,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.482423842,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.482423842,
+          "y": 0.0546855479
+        },
+        {
+          "x": 0.6152324,
+          "y": 0.00195507822
+        },
+        {
+          "x": 0.6152324,
+          "y": 0.0546855479
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_left_003",
+      "boundsDataCenter": {
+        "x": 2.5625,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.3125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.3125,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.341798842,
+          "y": 0.5664082
+        },
+        {
+          "x": 0.341798842,
+          "y": 0.6132793
+        },
+        {
+          "x": 0.4746074,
+          "y": 0.5664082
+        },
+        {
+          "x": 0.4746074,
+          "y": 0.6132793
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 1,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_left_004",
+      "boundsDataCenter": {
+        "x": 2.53125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.3125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.890623033
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.890623033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_right_003",
+      "boundsDataCenter": {
+        "x": 2.75,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 2.0,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 2.0,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.419923842,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.4667949,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.419923842,
+          "y": 0.749998033
+        },
+        {
+          "x": 0.4667949,
+          "y": 0.749998033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_right_002",
+      "boundsDataCenter": {
+        "x": 2.78125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 2.0,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5625,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 2.0,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5625,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.617189467
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.751951158
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.751951158
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_left_002",
+      "boundsDataCenter": {
+        "x": 2.53125,
+        "y": 2.28125,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.5625,
+        "y": 4.3125,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.75,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.3125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.75,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.367189467,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.755861342
+        },
+        {
+          "x": 0.367189467,
+          "y": 0.890623033
+        },
+        {
+          "x": 0.416013658,
+          "y": 0.890623033
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    },
+    {
+      "name": "gungeon_guard_move_left_001",
+      "boundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.25,
+        "z": 0.0
+      },
+      "boundsDataExtents": {
+        "x": 1.6875,
+        "y": 4.25,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataCenter": {
+        "x": 2.65625,
+        "y": 2.21875,
+        "z": 0.0
+      },
+      "untrimmedBoundsDataExtents": {
+        "x": 5.3125,
+        "y": 4.4375,
+        "z": 0.0
+      },
+      "texelSize": {
+        "x": 0.0625,
+        "y": 0.0625
+      },
+      "position0": {
+        "x": 1.8125,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position1": {
+        "x": 3.5,
+        "y": 0.125,
+        "z": 0.0
+      },
+      "position2": {
+        "x": 1.8125,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "position3": {
+        "x": 3.5,
+        "y": 4.375,
+        "z": 0.0
+      },
+      "uvs": [
+        {
+          "x": 0.4003926,
+          "y": 0.347658217
+        },
+        {
+          "x": 0.453123033,
+          "y": 0.347658217
+        },
+        {
+          "x": 0.4003926,
+          "y": 0.480466783
+        },
+        {
+          "x": 0.453123033,
+          "y": 0.480466783
+        }
+      ],
+      "material": {
+        "m_FileID": 0,
+        "m_PathID": -681483612213734850
+      },
+      "materialId": 0,
+      "extractRegion": 0,
+      "regionX": 0,
+      "regionY": 0,
+      "regionW": 0,
+      "regionH": 0,
+      "flipped": 0,
+      "complexGeometry": 0,
+      "physicsEngine": 0,
+      "colliderType": 1,
+      "collisionLayer": 6,
+      "metadata": {
+        "type": 0,
+        "weight": 0.1,
+        "dungeonRoomSubType": 0,
+        "secondRoomSubType": -1,
+        "thirdRoomSubType": -1,
+        "preventWallStamping": 0,
+        "usesAnimSequence": 0,
+        "usesNeighborDependencies": 0,
+        "usesPerTileVFX": 0,
+        "tileVFXPlaystyle": 0,
+        "tileVFXChance": 1.0,
+        "tileVFXPrefab": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "tileVFXOffset": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "tileVFXDelayTime": 0.0,
+        "tileVFXDelayVariance": 0.0,
+        "tileVFXAnimFrame": 0
+      },
+      "colliderVertices": [],
+      "colliderConvex": 0,
+      "colliderSmoothSphereCollisions": 0
+    }
+  ],
+  "SpriteIDsWithBagelColliders": [],
+  "SpriteDefinedBagelColliders": [],
+  "SpriteIDsWithAttachPoints": [],
+  "SpriteDefinedAttachPoints": [],
+  "SpriteIDsWithNeighborDependencies": [],
+  "SpriteDefinedIndexNeighborDependencies": [],
+  "SpriteIDsWithAnimationSequences": [],
+  "SpriteDefinedAnimationSequences": [],
+  "premultipliedAlpha": 0,
+  "shouldGenerateTilemapReflectionData": 0,
+  "material": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "materials": [
+    {
+      "m_FileID": 0,
+      "m_PathID": -681483612213734850
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 4562688427644123782
+    }
+  ],
+  "textures": [
+    {
+      "m_FileID": 0,
+      "m_PathID": -5713032194692601545
+    }
+  ],
+  "pngTextures": [],
+  "materialPngTextureId": [
+    0,
+    0
+  ],
+  "textureFilterMode": 0,
+  "textureMipMaps": 0,
+  "allowMultipleAtlases": 0,
+  "spriteCollectionGUID": "aafc0543096e5924388be4a93a26c98e",
+  "spriteCollectionName": "NPC_Gungeon_Guardians_Collection",
+  "assetName": "",
+  "loadable": 0,
+  "invOrthoSize": 2.0,
+  "halfTargetHeight": 8.0,
+  "buildKey": 780347704,
+  "dataGuid": "57585e6123e30e441a8ebac419337ba2",
+  "managedSpriteCollection": 0,
+  "hasPlatformData": 0,
+  "spriteCollectionPlatforms": [],
+  "spriteCollectionPlatformGUIDs": []
+}
