@@ -1,21 +1,31 @@
 from pico2d import *
 import game_world
+import pygame
+import math
 
-class bullet:
+class Bullet:
     image = None
 
-    def __int__(self, mousex, mousey, velocity = 1):
-        if bullet.image == None:
-            bullet.image = load_image('bullet.png')
-        self.x, self.y, self.velocity = mousex, mousey, velocity
+    def __init__(self, mousex, mousey, posx, posy):
+        if Bullet.image == None:
+            Bullet.image = load_image('bullet.png')
+        self.pos = (posx, posy)
+        self.dir = (mousex - posx, mousey- posy)
+        length = math.hypot(*self.dir)
+        if length == 0.0:
+            self.dir = (0, -1)
+        else:
+            self.dir = (self.dir[0] / length, self.dir[1] / length)
+
+        self.speed = 2.5
 
     def draw(self):
-        self.image.draw(self.x, self.y)
+        self.image.draw(self.pos[0], self.pos[1], 30, 30)
 
     def update(self):
-        self.x += self.velocity
-        self.y += self.velocity
+        self.pos = (self.pos[0] + self.dir[0] * self.speed,
+                    self.pos[1] + self.dir[1] * self.speed)
 
-        if self.x < 25 or self.x > 800 - 25 or self.y < 25 or self.y > 800 - 25:
+        if self.pos[0] < 25 or self.pos[0] > 1200 - 25 or self.pos[1] < 25 or self.pos[1] > 600 - 25:
             game_world.remove_object(self)
 

@@ -1,5 +1,6 @@
 from pico2d import *
 import game_framework
+from bullet import Bullet
 import game_world
 
 
@@ -17,7 +18,7 @@ FRAMES_PER_ACTION = 6
 
 
 #2 이벤트 정의
-Mouse_Down, DD, AD, WD, SD, DU, AU, WU, SU = range(9)
+AT,DD, AD, WD, SD, DU, AU, WU, SU = range(9)
 
 
 key_event_table = {
@@ -28,7 +29,8 @@ key_event_table = {
     (SDL_KEYUP,   SDLK_d): DU,
     (SDL_KEYUP,   SDLK_a): AU,
     (SDL_KEYUP,   SDLK_w): WU,
-    (SDL_KEYUP,   SDLK_s): SU
+    (SDL_KEYUP,   SDLK_s): SU,
+    (SDL_MOUSEBUTTONDOWN,   SDL_BUTTON_LEFT): AT
 }
 
 class IDLE:
@@ -36,19 +38,20 @@ class IDLE:
         print('enter idle')
         self.dir = 0
         self.dir2 = 0
-        pass
-    def exit(self): # 상태를 나올 때 행하는 액션 , 고개 들기
+
+    def exit(self, event): # 상태를 나올 때 행하는 액션 , 고개 들기
         print('exit idle')
-        pass
+        if event == AT:
+           self.fire_shot()
+
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.frame = self.face_dir
-        pass
+
 
     # 외부에서 전달되는 self
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-        self.cursor.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-
+        self.cursor.draw(self.mouse_x, self.mouse_y)
 
 class RUN:
     @staticmethod
@@ -115,9 +118,11 @@ class RUN:
                 self.dir2 = 1
 
     @staticmethod
-    def exit(self):
+    def exit(self, event):
         print('exit RUN')
         self.face_dir = self.way
+        if event == AT:
+            self.fire_shot()
         pass
 
     @staticmethod
@@ -133,7 +138,7 @@ class RUN:
     @staticmethod
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-        self.cursor.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.cursor.draw(self.mouse_x, self.mouse_y)
 
 class RUN2:
     @staticmethod
@@ -184,8 +189,10 @@ class RUN2:
                 self.way = 5
 
     @staticmethod
-    def exit(self):
+    def exit(self, event):
         print('exit RUN2')
+        if event == AT:
+            self.fire_shot()
         pass
 
     @staticmethod
@@ -200,27 +207,26 @@ class RUN2:
     @staticmethod
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-        self.cursor.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.cursor.draw(self.mouse_x, self.mouse_y)
 
 next_stage = {
-    IDLE:  {DD: RUN,  AD: RUN,  WD: RUN,  SD: RUN,  DU: IDLE,  AU: IDLE,  WU: IDLE,  SU: IDLE, Mouse_Down: IDLE},
-    RUN:   {DD: RUN2, AD: RUN2, WD: RUN2, SD: RUN2, DU: IDLE,  AU: IDLE,  WU: IDLE,  SU: IDLE, Mouse_Down: IDLE},
-    RUN2:  {DD: IDLE, AD: IDLE, WD: IDLE, SD: IDLE, DU: RUN,   AU: RUN,   WU: RUN,   SU: RUN, Mouse_Down: IDLE}
+    IDLE:  {DD: RUN,  AD: RUN,  WD: RUN,  SD: RUN,  DU: IDLE,  AU: IDLE,  WU: IDLE,  SU: IDLE, AT: IDLE},
+    RUN:   {DD: RUN2, AD: RUN2, WD: RUN2, SD: RUN2, DU: IDLE,  AU: IDLE,  WU: IDLE,  SU: IDLE, AT: RUN},
+    RUN2:  {DD: IDLE, AD: IDLE, WD: IDLE, SD: IDLE, DU: RUN,   AU: RUN,   WU: RUN,   SU: RUN, AT: RUN2}
 }
 
-class character:
 
+class character:
     def __init__(self):
         self.x, self.y = 100, 100 # 캐릭터 좌표
-        # self.mouse_x, self.mouse_y = 600, 400 # 마우스 좌표
+        self.mouse_x, self.mouse_y = 0, 0 # 마우스 좌표
         self.frame = 0
         self.way = 0
         self.dir, self.dir2 = 0, 0
         self.face_dir = 0
 
-        self.image = pico2d.load_image('character_sheet.png')
-        self.cursor = pico2d.load_image('gun_cursor.png')
-        # self.life = pico2d.load_image('life.png')
+        self.image = load_image('character_sheet.png')
+        self.cursor = load_image('gun_cursor.png')
 
         self.q = []  # 이벤트 큐 초기화
         self.cur_state = IDLE
@@ -231,7 +237,7 @@ class character:
 
         if self.q:
             event = self.q.pop()
-            self.cur_state.exit(self) # 현재 상태를 나가야되고,
+            self.cur_state.exit(self, event) # 현재 상태를 나가야되고,
             self.cur_state = next_stage[self.cur_state][event] # 다음 상태를 구한다
             self.cur_state.enter(self, event)
 
@@ -242,14 +248,14 @@ class character:
         if (event.type, event.key) in key_event_table:
             key_event = key_event_table[(event.type, event.key)]
             self.add_event(key_event)
-        # if event.type == pico2d.SDL_MOUSEMOTION: # 마우스
-        #     mouse_x, mouse_y = event.x, 800 - 1 - event.y
-
-        # if event.type == pico2d.SDL_MOUSEBUTTONDOWN:
-        #     if event.button == pico2d.SDL_BUTTON_LEFT:
-        #         mouse_x, mouse_y = event.x, 800 - 1 - event.y
-        #         bulletXY.append(bullet(mouse_x, mouse_y, hero.x, hero.y))
+        if (event.type, event.button) in key_event_table:
+            key_event = key_event_table[(event.type, event.button)]
+            self.add_event(key_event)
 
     def draw(self):
         self.cur_state.draw(self)
-        # self.cursor.draw(self.mouse_x, self.mouse_y)
+
+    def fire_shot(self):
+        shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
+        game_world.add_object(shots, 1)
+
