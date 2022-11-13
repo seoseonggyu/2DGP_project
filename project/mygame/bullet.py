@@ -17,7 +17,7 @@ class Bullet:
         else:
             self.dir = (self.dir[0] / length, self.dir[1] / length)
 
-        self.speed = 2.5
+        self.speed = 1.5
 
     def draw(self):
         self.image.draw(self.pos[0], self.pos[1], 30, 30)
