@@ -46,8 +46,6 @@ class WEAPON_IDLE:
     def exit(self, event):  # 상태를 나올 때 행하는 액션 , 고개 들기
         if event == AT:
             self.fire_shot()
-        if event == JP:
-            pass
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
 
@@ -79,7 +77,6 @@ class WEAPON_IDLE:
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.image
-
 
         self.weapon1.clip_composite_draw(0, 0, 27, 22,
                                        self.mouse_angle - 3.141592 / 2, '', self.x + 22, self.y - 5, 40, 40)
@@ -134,8 +131,6 @@ class WEAPON_RUN:
     def exit(self, event):  # 상태를 나올 때 행하는 액션 , 고개 들기
         if event == AT:
             self.fire_shot()
-        if event == JP:
-            pass
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
@@ -209,15 +204,9 @@ class WEAPON_RUN2:
     def exit(self, event):
         if event == AT:
             self.fire_shot()
-        if event == JP:
-            pass
 
     @staticmethod
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
-        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
-        self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
         if (self.mouse_angle <= 1.8) and (self.mouse_angle > 0.25):
             self.way = 0
@@ -234,6 +223,11 @@ class WEAPON_RUN2:
         elif (self.mouse_angle <= 6.3) and (self.mouse_angle > 6.1):
             self.way = 5
 
+        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+        self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
+        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+
         self.x = pico2d.clamp(0, self.x, 1200)
         self.y = pico2d.clamp(0, self.y, 600)
 
@@ -246,21 +240,14 @@ class WEAPON_RUN2:
 
 class IDLE:
     def enter(self, event): # 상태에 들어갈 때 행하는 액션
-        print('enter idle')
         self.dir = 0
         self.dir2 = 0
-        if event == JP:
-            self.jump_check = True
 
     def exit(self, event):
-        if event == JP:
-            self.character_jump()
+        pass
 
     def do(self):
-        if self.jump_check == False:
             self.frame = self.face_dir
-        elif self.jump_check == True:
-            self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 9
             self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
             self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
@@ -269,13 +256,7 @@ class IDLE:
     # 외부에서 전달되는 self
     def draw(self):
         self.cursor.draw(self.mouse_x, self.mouse_y)
-
-        if self.jump_check == False:
-            self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-
-        elif self.jump_check == True:
-            self.jump.clip_draw(int(self.frame) * 42, 62 * self.way, 42, 62, self.x, self.y, 50, 50)
-            self.jump_check = False
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
 
 class RUN:
     @staticmethod
@@ -344,8 +325,6 @@ class RUN:
     def exit(self, event):
         print('exit RUN')
         self.face_dir = self.way
-        if event == JP:
-            pass
         pass
 
     @staticmethod
@@ -412,8 +391,7 @@ class RUN2:
 
     @staticmethod
     def exit(self, event):
-        if event == JP:
-            pass
+        pass
 
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
@@ -429,19 +407,56 @@ class RUN2:
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
+class JUMP:
+    def enter(self, event): # 상태에 들어갈 때 행하는 액션
+        print('jump idle')
+        self.dir += 1
+        self.way = 2
+
+    def exit(self, event):
+        print('jump exit')
+        self.jump_check = False
+
+    def do(self):
+        self.x = pico2d.clamp(0, self.x, 1000)
+        self.y = pico2d.clamp(0, self.y, 600)
+
+        if self.jump_check == False:
+            if self.frame >= 8.99:
+                self.jump_check = True
+
+            self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 9
+            self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+            print('frame:', self.frame)
+
+        if self.jump_check == True:
+            pass
+
+    # 외부에서 전달되는 self
+    def draw(self):
+        self.cursor.draw(self.mouse_x, self.mouse_y)
+
+        if self.jump_check == False:
+            self.jump.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        elif self.jump_check == True:
+            self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+
+
 next_stage = {
     IDLE:   {DD: RUN,    AD: RUN,    WD: RUN,    SD: RUN,    DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, QD: WEAPON_IDLE,
-             AT: IDLE, JP: IDLE},
-    RUN:    {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, AT: RUN, JP: RUN,
-             QD: WEAPON_IDLE},
-    RUN2:   {DD: IDLE,   AD: IDLE,   WD: IDLE,   SD: IDLE,   DU: RUN,  AU: RUN,  WU: RUN,  SU: RUN,  AT: RUN2, JP: RUN2,
-             QD: WEAPON_IDLE},
+             AT: IDLE, JP: JUMP},
+    RUN:    {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, QD: WEAPON_IDLE,
+             AT: RUN,  JP: JUMP},
+    RUN2:   {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: RUN,  AU: RUN,  WU: RUN,  SU: RUN,  QD: WEAPON_IDLE,
+             AT: RUN2, JP: JUMP},
     WEAPON_IDLE: {DD: WEAPON_RUN,  AD: WEAPON_RUN,  WD: WEAPON_RUN,  SD: WEAPON_RUN,  DU: WEAPON_IDLE, AU: WEAPON_IDLE,
-                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE, JP: WEAPON_IDLE},
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE, JP: JUMP},
     WEAPON_RUN:  {DD: WEAPON_RUN2, AD: WEAPON_RUN2, WD: WEAPON_RUN2, SD: WEAPON_RUN2, DU: WEAPON_IDLE, AU: WEAPON_IDLE,
-                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN, JP: WEAPON_RUN},
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN,  JP: JUMP},
     WEAPON_RUN2: {DD: WEAPON_IDLE, AD: WEAPON_IDLE, WD: WEAPON_IDLE, SD: WEAPON_RUN2, DU: WEAPON_RUN,  AU: WEAPON_RUN,
-                  WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2,JP: WEAPON_RUN2}
+                  WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2, JP: JUMP},
+    JUMP: {DD: IDLE, AD: IDLE, WD: IDLE, SD: IDLE, DU: IDLE,  AU: IDLE,
+                  WU: IDLE,  SU: IDLE, JP: JUMP},
 }
 
 
@@ -494,6 +509,3 @@ class character:
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
         game_world.add_object(shots, 1)
-
-    def character_jump(self):
-        pass
