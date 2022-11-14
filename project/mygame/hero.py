@@ -7,7 +7,7 @@ import pygame
 
 # Run Speed
 PIXEL_PER_METER = (10.0 / 0.01) # 10 pixel 30 cm
-RUN_SPEED_KMPH = 1 # Km / Hour
+RUN_SPEED_KMPH = 1.5 # Km / Hour
 RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
 RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
 RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -19,7 +19,7 @@ FRAMES_PER_ACTION = 6
 
 
 #2 이벤트 정의
-AT,DD, AD, WD, SD, DU, AU, WU, SU, QD = range(10)
+AT,DD, AD, WD, SD, DU, AU, WU, SU, QD, JP = range(11)
 
 
 key_event_table = {
@@ -33,6 +33,7 @@ key_event_table = {
     (SDL_KEYUP,   SDLK_w): WU,
     (SDL_KEYUP,   SDLK_s): SU,
     (SDL_MOUSEBUTTONDOWN,   SDL_BUTTON_LEFT): AT,
+    (SDL_MOUSEBUTTONDOWN,   SDL_BUTTON_RIGHT): JP
 }
 
 class WEAPON_IDLE:
@@ -45,6 +46,8 @@ class WEAPON_IDLE:
     def exit(self, event):  # 상태를 나올 때 행하는 액션 , 고개 들기
         if event == AT:
             self.fire_shot()
+        if event == JP:
+            pass
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
 
@@ -69,14 +72,18 @@ class WEAPON_IDLE:
         elif (self.mouse_angle <= 6.3) and (self.mouse_angle > 6.1):
             self.way = 5
 
+        self.frame = self.face_dir
+        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+
 
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image
 
-        # self.image.clip_composite_draw(int(self.frame) * 40, 42 * self.way, 40, 42,
-        #                                self.mouse_angle, '', self.x, self.y, 120, 120)
+
+        self.weapon1.clip_composite_draw(0, 0, 27, 22,
+                                       self.mouse_angle - 3.141592 / 2, '', self.x + 22, self.y - 5, 40, 40)
         self.cursor.draw(self.mouse_x, self.mouse_y)
-
 
 class WEAPON_RUN:
     def enter(self, event):  # 상태에 들어갈 때 행하는 액션
@@ -127,6 +134,8 @@ class WEAPON_RUN:
     def exit(self, event):  # 상태를 나올 때 행하는 액션 , 고개 들기
         if event == AT:
             self.fire_shot()
+        if event == JP:
+            pass
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
@@ -155,6 +164,10 @@ class WEAPON_RUN:
 
     def draw(self):
         self.cursor.draw(self.mouse_x, self.mouse_y)
+
+        self.weapon1.clip_composite_draw(0, 0, 27, 22,
+                                         self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
+
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
 
 class WEAPON_RUN2:
@@ -196,6 +209,8 @@ class WEAPON_RUN2:
     def exit(self, event):
         if event == AT:
             self.fire_shot()
+        if event == JP:
+            pass
 
     @staticmethod
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
@@ -226,25 +241,41 @@ class WEAPON_RUN2:
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.cursor.draw(self.mouse_x, self.mouse_y)
-
+        self.weapon1.clip_composite_draw(0, 0, 27, 22,
+                                         self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
 
 class IDLE:
     def enter(self, event): # 상태에 들어갈 때 행하는 액션
         print('enter idle')
         self.dir = 0
         self.dir2 = 0
+        if event == JP:
+            self.jump_check = True
 
-    def exit(self, event): # 상태를 나올 때 행하는 액션 , 고개 들기
-        pass
+    def exit(self, event):
+        if event == JP:
+            self.character_jump()
 
-    def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
-        self.frame = self.face_dir
+    def do(self):
+        if self.jump_check == False:
+            self.frame = self.face_dir
+        elif self.jump_check == True:
+            self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 9
+            self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+            self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+
 
 
     # 외부에서 전달되는 self
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.cursor.draw(self.mouse_x, self.mouse_y)
+
+        if self.jump_check == False:
+            self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+
+        elif self.jump_check == True:
+            self.jump.clip_draw(int(self.frame) * 42, 62 * self.way, 42, 62, self.x, self.y, 50, 50)
+            self.jump_check = False
 
 class RUN:
     @staticmethod
@@ -313,6 +344,8 @@ class RUN:
     def exit(self, event):
         print('exit RUN')
         self.face_dir = self.way
+        if event == JP:
+            pass
         pass
 
     @staticmethod
@@ -379,7 +412,8 @@ class RUN2:
 
     @staticmethod
     def exit(self, event):
-        print('exit RUN2')
+        if event == JP:
+            pass
 
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
@@ -396,12 +430,18 @@ class RUN2:
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
 next_stage = {
-    IDLE:   {DD: RUN,    AD: RUN,    WD: RUN,    SD: RUN,    DU: IDLE,          AU: IDLE,          WU: IDLE,          SU: IDLE, QD: WEAPON_IDLE},
-    RUN:    {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: IDLE,          AU: IDLE,          WU: IDLE,          SU: IDLE},
-    RUN2:   {DD: IDLE,   AD: IDLE,   WD: IDLE,   SD: IDLE,   DU: RUN,           AU: RUN,           WU: RUN,           SU: RUN},
-    WEAPON_IDLE: {DD: WEAPON_RUN, AD: WEAPON_RUN, WD: WEAPON_RUN, SD: WEAPON_RUN, DU: WEAPON_IDLE,   AU: WEAPON_IDLE,   WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE},
-    WEAPON_RUN: {DD: WEAPON_RUN2, AD: WEAPON_RUN2, WD: WEAPON_RUN2, SD: WEAPON_RUN2, DU: WEAPON_IDLE,   AU: WEAPON_IDLE,   WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN},
-    WEAPON_RUN2: {DD: WEAPON_IDLE, AD: WEAPON_IDLE, WD: WEAPON_IDLE, SD: WEAPON_RUN2, DU: WEAPON_RUN,   AU: WEAPON_RUN,   WU: WEAPON_RUN, SU: WEAPON_RUN, AT: WEAPON_RUN2}
+    IDLE:   {DD: RUN,    AD: RUN,    WD: RUN,    SD: RUN,    DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, QD: WEAPON_IDLE,
+             AT: IDLE, JP: IDLE},
+    RUN:    {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, AT: RUN, JP: RUN,
+             QD: WEAPON_IDLE},
+    RUN2:   {DD: IDLE,   AD: IDLE,   WD: IDLE,   SD: IDLE,   DU: RUN,  AU: RUN,  WU: RUN,  SU: RUN,  AT: RUN2, JP: RUN2,
+             QD: WEAPON_IDLE},
+    WEAPON_IDLE: {DD: WEAPON_RUN,  AD: WEAPON_RUN,  WD: WEAPON_RUN,  SD: WEAPON_RUN,  DU: WEAPON_IDLE, AU: WEAPON_IDLE,
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE, JP: WEAPON_IDLE},
+    WEAPON_RUN:  {DD: WEAPON_RUN2, AD: WEAPON_RUN2, WD: WEAPON_RUN2, SD: WEAPON_RUN2, DU: WEAPON_IDLE, AU: WEAPON_IDLE,
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN, JP: WEAPON_RUN},
+    WEAPON_RUN2: {DD: WEAPON_IDLE, AD: WEAPON_IDLE, WD: WEAPON_IDLE, SD: WEAPON_RUN2, DU: WEAPON_RUN,  AU: WEAPON_RUN,
+                  WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2,JP: WEAPON_RUN2}
 }
 
 
@@ -416,9 +456,12 @@ class character:
         self.way = 0
         self.dir, self.dir2 = 0, 0
         self.face_dir = 0
+        self.jump_check = False
 
         self.image = load_image('character_sheet.png')
         self.cursor = load_image('gun_cursor.png')
+        self.jump = load_image('jump_sheet.png')
+        self.weapon1 = load_image('weapon1.png')
         self.rotation_image = None
 
         self.q = []  # 이벤트 큐 초기화
@@ -451,3 +494,6 @@ class character:
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
         game_world.add_object(shots, 1)
+
+    def character_jump(self):
+        pass
