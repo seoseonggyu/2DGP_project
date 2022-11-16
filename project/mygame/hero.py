@@ -1,7 +1,9 @@
 from pico2d import *
 import game_framework
+import play_state
 from bullet import Bullet
 import game_world
+from enemy import Enemy1
 import pygame
 
 m_w = 1200
@@ -58,7 +60,7 @@ class WEAPON_IDLE:
 
         self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
 
-        print('mouse_angle: ',self.mouse_angle)
+        # print('mouse_angle: ',self.mouse_angle)
 
         if (self.mouse_angle <= 1.8) and (self.mouse_angle > 0.25):
             self.way = 0
@@ -521,6 +523,7 @@ class character:
             self.cur_state = next_stage[self.cur_state][event] # 다음 상태를 구한다
             self.cur_state.enter(self, event)
 
+
     def add_event(self, event):
         self.q.insert(0, event)
 
@@ -534,7 +537,13 @@ class character:
 
     def draw(self):
         self.cur_state.draw(self)
+        draw_rectangle(*self.get_bb())
 
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
         game_world.add_object(shots, 1)
+        game_world.add_collision_pairs(shots, play_state.enemy1, 'shots:enemy1')
+
+    def get_bb(self):
+        return self.x - 30, self.y - 30, self.x + 30, self.y + 35
+
