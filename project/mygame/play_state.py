@@ -1,12 +1,19 @@
 from pico2d import *
 import game_framework
 import game_world
+
 from hero import character
 from life import Life
+from enemy import Enemy1
+
+from map1 import Map1
 import title_state
 import logo_state
 
 hero = None
+stage1 = None
+gr = None
+enemy1 = None
 lifes = []
 
 def handle_events():
@@ -24,13 +31,17 @@ def handle_events():
 
 # 초기화
 def enter():
-    global hero, lifes
+    global hero, lifes, stage1, enemy1
     hero = character()
+    enemy1 = Enemy1()
+    #stage1 = Map1()
     lifes.append(Life(50, 550))
     lifes.append(Life(100, 550))
     lifes.append(Life(150, 550))
 
     game_world.add_object(hero, 1)
+    game_world.add_object(enemy1, 1)
+    #game_world.add_object(stage1, 0)
     for i in lifes:
         game_world.add_object(i, 0)
 

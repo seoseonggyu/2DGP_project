@@ -4,10 +4,14 @@ from bullet import Bullet
 import game_world
 import pygame
 
+m_w = 1200
+m_h = 1200
+
+
 
 # Run Speed
 PIXEL_PER_METER = (10.0 / 0.01) # 10 pixel 30 cm
-RUN_SPEED_KMPH = 1.5 # Km / Hour
+RUN_SPEED_KMPH = 0.5 # Km / Hour
 RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
 RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
 RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -16,6 +20,7 @@ RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
 TIME_PER_ACTION = 0.7
 ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 6
+
 
 
 #2 이벤트 정의
@@ -76,10 +81,10 @@ class WEAPON_IDLE:
 
     def draw(self):
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
-        self.image
 
         self.weapon1.clip_composite_draw(0, 0, 27, 22,
                                        self.mouse_angle - 3.141592 / 2, '', self.x + 22, self.y - 5, 40, 40)
+
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
 class WEAPON_RUN:
@@ -240,18 +245,18 @@ class WEAPON_RUN2:
 
 class IDLE:
     def enter(self, event): # 상태에 들어갈 때 행하는 액션
+        print('Enter Idle')
         self.dir = 0
         self.dir2 = 0
 
     def exit(self, event):
-        pass
+        print('eixt Idle')
+        print('-------')
 
     def do(self):
             self.frame = self.face_dir
             self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
             self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
-
-
 
     # 외부에서 전달되는 self
     def draw(self):
@@ -261,68 +266,71 @@ class IDLE:
 class RUN:
     @staticmethod
     def enter(self, event):
-            if event == DD:
-                self.way = 0
-                self.dir += 1
+        print('Enter run')
+        if event == DD:
+            self.way = 0
+            self.dir += 1
 
-            elif event == AD:
-                self.way = 1
-                self.dir -= 1
+        elif event == AD:
+            self.way = 1
+            self.dir -= 1
 
-            elif event == WD:
+        elif event == WD:
+            self.way = 4
+            self.dir2 += 1
+
+        elif event == SD:
+            self.way = 5
+            self.dir2 -= 1
+
+        if event == DU:
+            if self.dir2 > 0:
                 self.way = 4
-                self.dir2 += 1
-
-            elif event == SD:
+                self.dir -= 1
+            elif self.dir2 < 0:
                 self.way = 5
+                self.dir -= 1
+            elif self.dir < 0:
+                self.way = 1
+                self.dir = -1
+
+        elif event == AU:
+            if self.dir2 > 0:
+                self.way = 4
+                self.dir += 1
+            elif self.dir2 < 0:
+                self.way = 5
+                self.dir += 1
+            elif self.dir > 0:
+                self.way = 0
+                self.dir = 1
+
+        elif event == WU:
+            if self.dir > 0:
+                self.way = 0
                 self.dir2 -= 1
+            elif self.dir < 0:
+                self.way = 1
+                self.dir2 -= 1
+            elif self.dir2 < 0:
+                self.way = 5
+                self.dir2 = -1
 
-            if event == DU:
-                if self.dir2 > 0:
-                    self.way = 4
-                    self.dir -= 1
-                elif self.dir2 < 0:
-                    self.way = 5
-                    self.dir -= 1
-                elif self.dir < 0:
-                    self.way = 1
-                    self.dir = -1
-
-            elif event == AU:
-                if self.dir2 > 0:
-                    self.way = 4
-                    self.dir += 1
-                elif self.dir2 < 0:
-                    self.way = 5
-                    self.dir += 1
-                elif self.dir > 0:
-                    self.way = 0
-                    self.dir = 1
-
-            elif event == WU:
-                if self.dir > 0:
-                    self.way = 0
-                    self.dir2 -= 1
-                elif self.dir < 0:
-                    self.way = 1
-                    self.dir2 -= 1
-                elif self.dir2 < 0:
-                    self.way = 5
-                    self.dir2 = -1
-
-            elif event == SU:
-                if self.dir > 0:
-                    self.way = 0
-                    self.dir2 += 1
-                elif self.dir < 0:
-                    self.way = 1
-                    self.dir2 += 1
-                elif self.dir2 > 0:
-                    self.way = 4
-                    self.dir2 = 1
+        elif event == SU:
+            if self.dir > 0:
+                self.way = 0
+                self.dir2 += 1
+            elif self.dir < 0:
+                self.way = 1
+                self.dir2 += 1
+            elif self.dir2 > 0:
+                self.way = 4
+                self.dir2 = 1
 
     @staticmethod
     def exit(self, event):
+        print('exit run')
+        print('-------')
         self.face_dir = self.way
 
     @staticmethod
@@ -343,53 +351,55 @@ class RUN:
 class RUN2:
     @staticmethod
     def enter(self, event):
-            if event == DD:
-                if self.dir2 > 0:
-                    self.way = 2
-                    self.dir += 1
-                elif self.dir2 < 0:
-                    self.way = 0
-                    self.dir += 1
-                else:
-                    self.dir = 1
-                    self.way = 0
+        print('Enter RUN2')
+        if event == DD:
+            if self.dir2 > 0:
+                self.way = 2
+                self.dir += 1
+            elif self.dir2 < 0:
+                self.way = 0
+                self.dir += 1
+            else:
+                self.dir = 1
+                self.way = 0
 
-            elif event == AD:
-                if self.dir2 > 0:
-                    self.way = 3
-                    self.dir -= 1
-                elif self.dir2 < 0:
-                    self.way = 1
-                    self.dir -= 1
-                else:
-                    self.dir = -1
-                    self.way = 1
+        elif event == AD:
+            if self.dir2 > 0:
+                self.way = 3
+                self.dir -= 1
+            elif self.dir2 < 0:
+                self.way = 1
+                self.dir -= 1
+            else:
+                self.dir = -1
+                self.way = 1
 
-            elif event == WD:
-                if self.dir > 0:
-                    self.way = 2
-                    self.dir2 += 1
-                elif self.dir < 0:
-                    self.way = 3
-                    self.dir2 += 1
-                else:
-                    self.dir2 = 1
-                    self.way = 4
+        elif event == WD:
+            if self.dir > 0:
+                self.way = 2
+                self.dir2 += 1
+            elif self.dir < 0:
+                self.way = 3
+                self.dir2 += 1
+            else:
+                self.dir2 = 1
+                self.way = 4
 
-            elif event == SD:
-                if self.dir > 0:
-                    self.way = 0
-                    self.dir2 -= 1
-                elif self.dir < 0:
-                    self.way = 1
-                    self.dir2 -= 1
-                else:
-                    self.dir2 = -1
-                    self.way = 5
+        elif event == SD:
+            if self.dir > 0:
+                self.way = 0
+                self.dir2 -= 1
+            elif self.dir < 0:
+                self.way = 1
+                self.dir2 -= 1
+            else:
+                self.dir2 = -1
+                self.way = 5
 
     @staticmethod
     def exit(self, event):
-        pass
+        print('exit RUN2')
+        print('-------')
 
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
@@ -405,70 +415,86 @@ class RUN2:
         self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
-class JUMP:
-    def enter(self, event): # 상태에 들어갈 때 행하는 액션
-        print('jump idle')
-        if self.dir > 0 or self.dir < 0:
-            self.way = 1
-        if self.dir > 0 and self.dir2 > 0:
-            self.way = 1
-
-
-    def exit(self, event):
-        print('jump exit')
-        self.jump_check = False
-
-    def do(self):
-        self.x = pico2d.clamp(0, self.x, 1000)
-        self.y = pico2d.clamp(0, self.y, 600)
-
-        if int(self.frame) >= 8.0:
-            self.jump_check = True
-
-        if self.jump_check == False:
-            self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 9
-            self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-
-
-        if self.jump_check == True:
-            self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-            pass
-
-    # 외부에서 전달되는 self
-    def draw(self):
-        self.cursor.draw(self.mouse_x, self.mouse_y)
-
-        if self.jump_check == False:
-            self.jump.clip_draw(int(self.frame) * 42, 62 * self.way, 42, 62, self.x, self.y, 120, 200)
-
-        elif self.jump_check == True:
-            self.image.clip_draw(int(self.frame), 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+# class JUMP:
+#     def enter(self, event): # 상태에 들어갈 때 행하는 액션
+#         print('enter jump')
+#         self.jump_check = False
+#         if self.dir > 0 and self.dir2 < 0:
+#             self.way = 0
+#         elif self.dir < 0 and self.dir2 < 0:
+#             self.way = 1
+#         elif self.dir < 0:
+#             self.way = 1
+#         elif self.dir > 0 and self.dir2 > 0:
+#             self.way = 2
+#         elif self.dir < 0 and self.dir2 > 0:
+#             self.way = 3
+#         elif self.dir2 < 0:
+#             self.way = 4
+#         elif self.dir2 > 0:
+#             self.way = 5
+#
+#     def exit(self, event):
+#         print('jump exit')
+#         print('-------')
+#
+#     def do(self):
+#         self.x = pico2d.clamp(0, self.x, 1000)
+#         self.y = pico2d.clamp(0, self.y, 600)
+#         #print('frame: ', self.frame)
+#         if int(self.frame) >= 8.0:
+#             self.jump_check = True
+#             if self.dir > 0:
+#                 self.dir -= 1
+#             if self.dir < 0:
+#                 self.dir += 1
+#             if self.dir2 > 0:
+#                 self.dir2 -= 1
+#             if self.dir2 < 0:
+#                 self.dir2 += 1
+#             print('jump frmae:', self.frame)
+#
+#
+#         if self.jump_check == False:
+#             self.frame = (self.frame + JUMP_FRAMES_PER_ACTION * JUMP_ACTION_PER_TIME * game_framework.frame_time) % 9
+#             self.x += self.dir * JUMP_RUN_SPEED_PPS * game_framework.frame_time
+#             self.y += self.dir2 * JUMP_RUN_SPEED_PPS * game_framework.frame_time
+#
+#
+#         if self.jump_check == True:
+#             self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
+#
+#     def draw(self):
+#         self.cursor.draw(self.mouse_x, self.mouse_y)
+#
+#         if self.jump_check == False:
+#             self.jump.clip_draw(int(self.frame) * 42, 62 * self.way, 42, 62, self.x, self.y, 120, 200)
+#
+#         elif self.jump_check == True:
+#             self.image.clip_draw(int(self.frame), 42 * self.way, 40, 42, self.x, self.y, 120, 120)
 
 
 next_stage = {
     IDLE:   {DD: RUN,    AD: RUN,    WD: RUN,    SD: RUN,    DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, QD: WEAPON_IDLE,
              AT: IDLE, JP: IDLE},
     RUN:    {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: IDLE, AU: IDLE, WU: IDLE, SU: IDLE, QD: WEAPON_IDLE,
-             AT: RUN,  JP: JUMP},
+             AT: RUN,  JP: RUN},
     RUN2:   {DD: RUN2,   AD: RUN2,   WD: RUN2,   SD: RUN2,   DU: RUN,  AU: RUN,  WU: RUN,  SU: RUN,  QD: WEAPON_IDLE,
-             AT: RUN2, JP: JUMP},
+             AT: RUN2, JP: RUN2},
     WEAPON_IDLE: {DD: WEAPON_RUN,  AD: WEAPON_RUN,  WD: WEAPON_RUN,  SD: WEAPON_RUN,  DU: WEAPON_IDLE, AU: WEAPON_IDLE,
-                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE, JP: JUMP},
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_IDLE, QD: IDLE, JP: WEAPON_IDLE},
     WEAPON_RUN:  {DD: WEAPON_RUN2, AD: WEAPON_RUN2, WD: WEAPON_RUN2, SD: WEAPON_RUN2, DU: WEAPON_IDLE, AU: WEAPON_IDLE,
-                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN,  JP: JUMP},
+                  WU: WEAPON_IDLE, SU: WEAPON_IDLE, AT: WEAPON_RUN,  JP: WEAPON_RUN},
     WEAPON_RUN2: {DD: WEAPON_IDLE, AD: WEAPON_IDLE, WD: WEAPON_IDLE, SD: WEAPON_RUN2, DU: WEAPON_RUN,  AU: WEAPON_RUN,
-                  WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2, JP: JUMP},
-    JUMP: {DD: RUN2, AD: RUN2, WD: RUN2, SD: RUN2, DU: JUMP,  AU: JUMP,
-                  WU: IDLE,  SU: IDLE, JP: JUMP},
+                  WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2, JP: WEAPON_RUN2}
 }
 
 
 class character:
-
     def __init__(self):
 
         self.mouse_angle = 0
-        self.x, self.y = 600, 300 # 캐릭터 좌표
+        self.x, self.y = 300, 300 # 캐릭터 좌표
         self.mouse_x, self.mouse_y = 0, 0 # 마우스 좌표
         self.frame = 0
         self.way = 0
