@@ -41,6 +41,7 @@ class Enemy1:
         self.wait_timer = 2.0
         self.build_behavior_tree()
         self.attack = False
+        self.attack_count = 0
 
     def wander(self):
         self.speed = RUN_SPEED_PPS
@@ -78,10 +79,15 @@ class Enemy1:
     def attack_to_player(self):
         self.speed = 0
         self.attack = True
-        self.dir = math.atan2(server.hero.y - self.y, server.hero.x - self.x)
-        # shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
-        return BehaviorTree.SUCCESS
+        if self.attack_count == 0:
+            enemy_shot = Bullet(server.hero.x, server.hero.y, self.x, self.y)
+            game_world.add_object(enemy_shot, 1)
+            self.attack_count += 1
+            print('self.frame == ',self.frame)
+        if self.frame >= 10.9:
+            self.attack_count = 0
 
+        return BehaviorTree.SUCCESS
 
 
     def get_next_position(self):
@@ -131,15 +137,17 @@ class Enemy1:
 
     def draw(self):
         if self.attack == False:
-            self.image_idle.clip_draw(int(self.frame) * 40, 0, 40, 42, self.x, self.y, 120, 120)
+            self.image_idle.clip_draw(int(self.frame) * 40, 62, 40, 62, self.x, self.y, 120, 120)
         elif self.attack == True:
-            self.image_attack.clip_draw(int(self.frame) * 45, 0, 45, 47, self.x, self.y, 120, 120)
+            self.image_attack.clip_draw(int(self.frame) * 45, 67, 45, 67, self.x, self.y, 120, 120)
 
         draw_rectangle(*self.get_bb())
 
     def get_bb(self):
-        return self.x - 30, self.y - 30, self.x + 30, self.y + 30
-
+        if self.attack == True:
+            return self.x - 10, self.y - 30, self.x + 60, self.y + 30
+        elif self.attack == False:
+            return self.x - 5, self.y - 30, self.x + 65, self.y + 30
     def handle_collision(self, other, group):
         if group == 'shots:enemy1':
             if self.life == True:

@@ -1,7 +1,7 @@
 from pico2d import *
 import game_world
 import math
-import play_state
+import server
 
 class Bullet:
     image = None
@@ -35,7 +35,7 @@ class Bullet:
         return self.x - 20, self.y - 20, self.x + 20, self.y + 20
 
     def handle_collision(self, other, group):
-        if play_state.enemy1.life == True:
+        if server.enemy1.life == True:
             if group == 'shots:enemy1':
                 game_world.remove_object(self)
 

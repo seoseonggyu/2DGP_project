@@ -35,8 +35,8 @@ def enter():
     server.enemy1 = Enemy1()
     game_world.add_object(server.enemy1, 1)
 
-    # server.stage1 = Map1()
-    # game_world.add_object(server.stage1, 0)
+    server.stage1 = Map1()
+    game_world.add_object(server.stage1, 0)
 
     server.lifes.append(Life(50, 550))
     server.lifes.append(Life(100, 550))

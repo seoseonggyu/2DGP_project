@@ -2,6 +2,7 @@ from pico2d import *
 import game_framework
 import play_state
 from bullet import Bullet
+import server
 import game_world
 from enemy import Enemy1
 import pygame
@@ -338,8 +339,8 @@ class RUN:
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+        # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+        # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
 
         self.x = pico2d.clamp(0, self.x, 1200)
@@ -406,8 +407,8 @@ class RUN2:
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+        # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+        # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
         self.x = pico2d.clamp(0, self.x, 1200)
         self.y = pico2d.clamp(0, self.y, 600)
@@ -495,7 +496,7 @@ class character:
     def __init__(self):
 
         self.mouse_angle = 0
-        self.x, self.y = 300, 300 # 캐릭터 좌표
+        self.x, self.y = 600, 300 # 캐릭터 좌표
         self.mouse_x, self.mouse_y = 0, 0 # 마우스 좌표
         self.frame = 0
         self.way = 0
@@ -541,7 +542,7 @@ class character:
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
         game_world.add_object(shots, 1)
-        game_world.add_collision_pairs(shots, play_state.enemy1, 'shots:enemy1')
+        game_world.add_collision_pairs(shots, server.enemy1, 'shots:enemy1')
 
     def get_bb(self):
         return self.x - 30, self.y - 30, self.x + 30, self.y + 35
