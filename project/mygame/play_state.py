@@ -13,6 +13,9 @@ from collision import *
 import title_state
 import logo_state
 
+map_h = 1200
+
+
 def handle_events():
 
     events = pico2d.get_events()
@@ -21,7 +24,7 @@ def handle_events():
             game_framework.quit()
 
         if event.type == pico2d.SDL_MOUSEMOTION:
-            server.hero.mouse_x, server.hero.mouse_y = event.x, 600 - 1 - event.y
+            server.hero.mouse_x, server.hero.mouse_y = event.x, map_h - 1 - event.y
         if (event.type, event.key) == (pico2d.SDL_KEYDOWN, pico2d.SDLK_ESCAPE):
             game_framework.quit()
         else:
@@ -38,9 +41,11 @@ def enter():
     server.stage1 = Map1()
     game_world.add_object(server.stage1, 0)
 
-    server.lifes.append(Life(50, 550))
-    server.lifes.append(Life(100, 550))
-    server.lifes.append(Life(150, 550))
+    server.lifes.append(Life(50, map_h - 50))
+    server.lifes.append(Life(110, map_h - 50))
+    server.lifes.append(Life(170, map_h - 50))
+
+    # game_world.add_collision_pairs(server.hero, server.stage1, 'hero:stage1')
 
 
     for i in server.lifes:
@@ -48,7 +53,7 @@ def enter():
 
 # 종료
 def exit():
-    for a, b, group  in game_world.all_collision_pairs():
+    for a, b, group in game_world.all_collision_pairs():
         print('a:  b:  group:  ', a, b, group)
     game_world.clear()
 
@@ -62,6 +67,10 @@ def update():
             print('COLLISION ', group)
             a.handle_collision(b, group)
             b.handle_collision(a, group)
+
+        if map_collide(a, b):
+            a.map_handle_collision(b, group)
+            b.map_handle_collision(a, group)
 
 
 def draw_world():

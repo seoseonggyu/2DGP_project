@@ -1,3 +1,5 @@
+import math
+
 from pico2d import *
 import game_framework
 import play_state
@@ -7,14 +9,14 @@ import game_world
 from enemy import Enemy1
 import pygame
 
-m_w = 1200
-m_h = 1200
+image_center_w = 1000
+image_center_h = 600
 
-
+character_image_size = 150
 
 # Run Speed
 PIXEL_PER_METER = (10.0 / 0.01) # 10 pixel 30 cm
-RUN_SPEED_KMPH = 0.5 # Km / Hour
+RUN_SPEED_KMPH = 3 # Km / Hour
 RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
 RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
 RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
@@ -56,37 +58,37 @@ class WEAPON_IDLE:
             self.fire_shot()
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
-
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
+        self.mouse_angle = math.pi - math.atan2(self.mouse_x - image_center_w, self.mouse_y - image_center_h)
 
-        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+        # print('mouse_angle: ',math.degrees(math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)))
+        # print('angle: ', math.degrees(5/6*math.pi))
 
-        # print('mouse_angle: ',self.mouse_angle)
-
-        if (self.mouse_angle <= 1.8) and (self.mouse_angle > 0.25):
+        if (math.degrees(self.mouse_angle)) >= math.degrees(1/6 * math.pi) and (math.degrees(self.mouse_angle) <= math.degrees(2/3 * math.pi)):
             self.way = 0
-        elif (self.mouse_angle <= 2.9) and (self.mouse_angle > 1.8):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2/3 * math.pi) and math.degrees(self.mouse_angle) <= math.degrees(5/6 * math.pi):
             self.way = 2
-        elif (self.mouse_angle <= 3.4) and (self.mouse_angle > 2.9):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(5/6 * math.pi) and math.degrees(self.mouse_angle) <= math.degrees(7/6 * math.pi):
             self.way = 4
-        elif (self.mouse_angle <= 4.45) and (self.mouse_angle > 3.4):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(7/6 * math.pi) and math.degrees(self.mouse_angle) <= math.degrees(4/3 * math.pi):
             self.way = 3
-        elif (self.mouse_angle <= 6.1) and (self.mouse_angle > 4.45):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(4/3 * math.pi) and math.degrees(self.mouse_angle) <= math.degrees(2 * math.pi - 1/6 * math.pi):
             self.way = 1
-        elif (self.mouse_angle <= 0.25) and (self.mouse_angle > 0):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2 * math.pi - 1/6 * math.pi) and math.degrees(self.mouse_angle) <= math.degrees(2 * math.pi):
             self.way = 5
-        elif (self.mouse_angle <= 6.3) and (self.mouse_angle > 6.1):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(0) and math.degrees(self.mouse_angle) <= math.degrees(1/6 * math.pi):
             self.way = 5
 
         self.frame = self.face_dir
-        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+        self.x = pico2d.clamp(0, self.x, 2 * image_center_w - 50)
+        self.y = pico2d.clamp(0, self.y, 2 * image_center_h - 50)
 
 
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        # self.weapon1.clip_composite_draw(0, 0, 27, 22,
+        #                             self.mouse_angle - 3.141592 / 2, '', self.x + 100, self.y + 100, 100, 100)
 
-        self.weapon1.clip_composite_draw(0, 0, 27, 22,
-                                       self.mouse_angle - 3.141592 / 2, '', self.x + 22, self.y - 5, 40, 40)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
 
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
@@ -141,37 +143,44 @@ class WEAPON_RUN:
             self.fire_shot()
 
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
-        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+        self.mouse_angle = math.pi - math.atan2(self.mouse_x - image_center_w, self.mouse_y - image_center_h)
 
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+        # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+        # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
-        self.x = pico2d.clamp(0, self.x, 1200)
-        self.y = pico2d.clamp(0, self.y, 600)
+        self.x = pico2d.clamp(0, self.x, 2 * image_center_w - 50)
+        self.y = pico2d.clamp(0, self.y, 2 * image_center_h - 50)
 
-        if (self.mouse_angle <= 1.8) and (self.mouse_angle > 0.25):
+        if (math.degrees(self.mouse_angle)) >= math.degrees(1 / 6 * math.pi) and (
+                math.degrees(self.mouse_angle) <= math.degrees(2 / 3 * math.pi)):
             self.way = 0
-        elif (self.mouse_angle <= 2.9) and (self.mouse_angle > 1.8):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2 / 3 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(5 / 6 * math.pi):
             self.way = 2
-        elif (self.mouse_angle <= 3.4) and (self.mouse_angle > 2.9):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(5 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(7 / 6 * math.pi):
             self.way = 4
-        elif (self.mouse_angle <= 4.45) and (self.mouse_angle > 3.4):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(7 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(4 / 3 * math.pi):
             self.way = 3
-        elif (self.mouse_angle <= 6.1) and (self.mouse_angle > 4.45):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(4 / 3 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(2 * math.pi - 1 / 6 * math.pi):
             self.way = 1
-        elif (self.mouse_angle <= 0.25) and (self.mouse_angle > 0):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2 * math.pi - 1 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(2 * math.pi):
             self.way = 5
-        elif (self.mouse_angle <= 6.3) and (self.mouse_angle > 6.1):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(0) and math.degrees(self.mouse_angle) <= math.degrees(
+                1 / 6 * math.pi):
             self.way = 5
 
     def draw(self):
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
-        self.weapon1.clip_composite_draw(0, 0, 27, 22,
-                                         self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
+        # self.weapon1.clip_composite_draw(0, 0, 27, 22,
+        #                                  self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
 
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
 
 class WEAPON_RUN2:
     @staticmethod
@@ -215,36 +224,44 @@ class WEAPON_RUN2:
 
     @staticmethod
     def do(self):  # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
+        self.mouse_angle = math.pi - math.atan2(self.mouse_x - image_center_w, self.mouse_y - image_center_h)
 
-        if (self.mouse_angle <= 1.8) and (self.mouse_angle > 0.25):
+        if (math.degrees(self.mouse_angle)) >= math.degrees(1 / 6 * math.pi) and (
+                math.degrees(self.mouse_angle) <= math.degrees(2 / 3 * math.pi)):
             self.way = 0
-        elif (self.mouse_angle <= 2.9) and (self.mouse_angle > 1.8):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2 / 3 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(5 / 6 * math.pi):
             self.way = 2
-        elif (self.mouse_angle <= 3.4) and (self.mouse_angle > 2.9):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(5 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(7 / 6 * math.pi):
             self.way = 4
-        elif (self.mouse_angle <= 4.45) and (self.mouse_angle > 3.4):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(7 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(4 / 3 * math.pi):
             self.way = 3
-        elif (self.mouse_angle <= 6.1) and (self.mouse_angle > 4.45):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(4 / 3 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(2 * math.pi - 1 / 6 * math.pi):
             self.way = 1
-        elif (self.mouse_angle <= 0.25) and (self.mouse_angle > 0):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(2 * math.pi - 1 / 6 * math.pi) and math.degrees(
+                self.mouse_angle) <= math.degrees(2 * math.pi):
             self.way = 5
-        elif (self.mouse_angle <= 6.3) and (self.mouse_angle > 6.1):
+        elif (math.degrees(self.mouse_angle)) > math.degrees(0) and math.degrees(self.mouse_angle) <= math.degrees(
+                1 / 6 * math.pi):
             self.way = 5
 
-        self.mouse_angle = math.pi - math.atan2(self.mouse_x - 600, self.mouse_y - 300)
+
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+        # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+        # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
-        self.x = pico2d.clamp(0, self.x, 1200)
-        self.y = pico2d.clamp(0, self.y, 600)
+        self.x = pico2d.clamp(0, self.x, 2 * image_center_w - 50)
+        self.y = pico2d.clamp(0, self.y, 2 * image_center_h - 50)
 
     @staticmethod
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
         self.cursor.draw(self.mouse_x, self.mouse_y)
-        self.weapon1.clip_composite_draw(0, 0, 27, 22,
-                                         self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
+        # self.weapon1.clip_composite_draw(0, 0, 27, 22,
+        #                                  self.mouse_angle - 3.141592 / 2, '', self.x + 28, self.y - 4, 42, 42)
 
 class IDLE:
     def enter(self, event): # 상태에 들어갈 때 행하는 액션
@@ -258,13 +275,13 @@ class IDLE:
 
     def do(self):
             self.frame = self.face_dir
-            self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-            self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+            # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+            # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
     # 외부에서 전달되는 self
     def draw(self):
         self.cursor.draw(self.mouse_x, self.mouse_y)
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
 
 class RUN:
     @staticmethod
@@ -339,8 +356,10 @@ class RUN:
     @staticmethod
     def do(self): # 상태에 있을 때 지속적으로 행하는 행위, 숨쉬기
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 6
-        # self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
-        # self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
+
+        if self.map_crash == True:
+            self.x += self.dir * RUN_SPEED_PPS * game_framework.frame_time
+            self.y += self.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
 
         self.x = pico2d.clamp(0, self.x, 1200)
@@ -348,7 +367,7 @@ class RUN:
 
     @staticmethod
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
         self.cursor.draw(self.mouse_x, self.mouse_y)
 
 class RUN2:
@@ -415,8 +434,9 @@ class RUN2:
 
     @staticmethod
     def draw(self):
-        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, 120, 120)
+        self.image.clip_draw(int(self.frame) * 40, 42 * self.way, 40, 42, self.x, self.y, character_image_size, character_image_size)
         self.cursor.draw(self.mouse_x, self.mouse_y)
+
 
 # class JUMP:
 #     def enter(self, event): # 상태에 들어갈 때 행하는 액션
@@ -496,19 +516,19 @@ class character:
     def __init__(self):
 
         self.mouse_angle = 0
-        self.x, self.y = 600, 300 # 캐릭터 좌표
+        self.x, self.y = image_center_w, image_center_h # 캐릭터 좌표
         self.mouse_x, self.mouse_y = 0, 0 # 마우스 좌표
         self.frame = 0
         self.way = 0
         self.dir, self.dir2 = 0, 0
         self.face_dir = 0
         self.jump_check = False
+        self.map_crash = False
 
         self.image = load_image('character_sheet.png')
         self.cursor = load_image('gun_cursor.png')
         self.jump = load_image('jump_sheet.png')
         self.weapon1 = load_image('weapon1.png')
-        self.rotation_image = None
 
         self.q = []  # 이벤트 큐 초기화
         self.cur_state = IDLE
@@ -538,6 +558,7 @@ class character:
     def draw(self):
         self.cur_state.draw(self)
         draw_rectangle(*self.get_bb())
+        draw_rectangle(*self.get_bb2())
 
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y)
@@ -546,4 +567,15 @@ class character:
 
     def get_bb(self):
         return self.x - 30, self.y - 30, self.x + 30, self.y + 35
+
+    def get_bb2(self):
+        return self.x - 520, self.y - 530, self.x + 520, self.y + 530
+
+    def map_handle_collision(self, other, group):
+        if group == 'hero:stage1':
+            self.map_crash = True
+
+    def handle_collision(self, other, group):
+        pass
+
 

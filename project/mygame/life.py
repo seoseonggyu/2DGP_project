@@ -12,4 +12,4 @@ class Life:
         pass
 
     def draw(self):
-        self.image.draw(self.x, self.y, 50, 50)
+        self.image.draw(self.x, self.y, 60, 60)

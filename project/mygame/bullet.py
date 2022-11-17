@@ -28,7 +28,7 @@ class Bullet:
         self.x = self.x + self.dir[0] * self.speed
         self.y = self.y + self.dir[1] * self.speed
 
-        if self.x  < 25 or self.x > 1200 - 100 or self.y < 25 or self.y > 600 - 25:
+        if self.x < 25 or self.x > 2000 - 100 or self.y < 25 or self.y > 1200 - 25:
             game_world.remove_object(self)
 
     def get_bb(self):
