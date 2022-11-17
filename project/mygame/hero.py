@@ -491,7 +491,6 @@ next_stage = {
                   WU: WEAPON_RUN,  SU: WEAPON_RUN,  AT: WEAPON_RUN2, JP: WEAPON_RUN2}
 }
 
-
 class character:
     def __init__(self):
 

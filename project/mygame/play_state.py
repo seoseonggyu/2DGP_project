@@ -1,23 +1,17 @@
 from pico2d import *
-
-import bullet
 import game_framework
 import game_world
 
 from hero import character
 from life import Life
 from enemy import Enemy1
-from bullet import Bullet
-
 from map1 import Map1
+
+import server
+from collision import *
+
 import title_state
 import logo_state
-
-hero = None
-stage1 = None
-gr = None
-lifes = []
-enemy = None
 
 def handle_events():
 
@@ -25,30 +19,31 @@ def handle_events():
     for event in events:
         if event.type == pico2d.SDL_QUIT:
             game_framework.quit()
+
         if event.type == pico2d.SDL_MOUSEMOTION:
-            hero.mouse_x, hero.mouse_y = event.x, 600 - 1 - event.y
+            server.hero.mouse_x, server.hero.mouse_y = event.x, 600 - 1 - event.y
         if (event.type, event.key) == (pico2d.SDL_KEYDOWN, pico2d.SDLK_ESCAPE):
             game_framework.quit()
         else:
-            hero.handle_event(event)
+            server.hero.handle_event(event)
 
 # 초기화
 def enter():
-    global hero, lifes, stage1, enemy1
-    hero = character()
-    enemy1 = Enemy1()
+    server.hero = character()
+    game_world.add_object(server.hero, 1)
 
-    lifes.append(Life(50, 550))
-    lifes.append(Life(100, 550))
-    lifes.append(Life(150, 550))
+    server.enemy1 = Enemy1()
+    game_world.add_object(server.enemy1, 1)
 
-    game_world.add_object(hero, 1)
-    game_world.add_object(enemy1, 1)
+    # server.stage1 = Map1()
+    # game_world.add_object(server.stage1, 0)
 
-    # stage1 = Map1()
-    #game_world.add_object(stage1, 0)
+    server.lifes.append(Life(50, 550))
+    server.lifes.append(Life(100, 550))
+    server.lifes.append(Life(150, 550))
 
-    for i in lifes:
+
+    for i in server.lifes:
         game_world.add_object(i, 0)
 
 # 종료
@@ -83,14 +78,3 @@ def pause():
 
 def resume():
     pass
-
-def collide(a, b):
-
-    left_a, bottom_a, right_a, top_a = a.get_bb()
-    left_b, bottom_b, right_b, top_b = b.get_bb()
-
-    if left_a > right_b: return False
-    if right_a < left_b: return False
-    if top_a < bottom_b: return False
-    if bottom_a > top_b: return False
-    return True
