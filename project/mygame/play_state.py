@@ -22,7 +22,6 @@ def handle_events():
     for event in events:
         if event.type == pico2d.SDL_QUIT:
             game_framework.quit()
-
         if event.type == pico2d.SDL_MOUSEMOTION:
             server.hero.mouse_x, server.hero.mouse_y = event.x, map_h - 1 - event.y
         if (event.type, event.key) == (pico2d.SDL_KEYDOWN, pico2d.SDLK_ESCAPE):
@@ -32,20 +31,41 @@ def handle_events():
 
 # 초기화
 def enter():
+    server.stage1 = Map1()
+    game_world.add_object(server.stage1, 0)
+
     server.hero = character()
     game_world.add_object(server.hero, 1)
 
-    server.enemy1 = Enemy1()
-    game_world.add_object(server.enemy1, 1)
+    # Boy() for i in range(11)
 
-    server.stage1 = Map1()
-    game_world.add_object(server.stage1, 0)
+    server.enemy1 = Enemy1()
+    server.enemy2 = Enemy1()
+    server.enemy3 = Enemy1()
+    server.enemy4 = Enemy1()
+    server.enemy5 = Enemy1()
+    server.enemy6 = Enemy1()
+    server.enemy7 = Enemy1()
+    server.enemy8 = Enemy1()
+    server.enemy9 = Enemy1()
+    server.enemy10 = Enemy1()
+    game_world.add_object(server.enemy1, 1)
+    game_world.add_object(server.enemy2, 1)
+    game_world.add_object(server.enemy3, 1)
+    game_world.add_object(server.enemy4, 1)
+    game_world.add_object(server.enemy5, 1)
+    game_world.add_object(server.enemy6, 1)
+    game_world.add_object(server.enemy7, 1)
+    game_world.add_object(server.enemy8, 1)
+    game_world.add_object(server.enemy9, 1)
+    game_world.add_object(server.enemy10, 1)
+
 
     server.lifes.append(Life(50, map_h - 50))
     server.lifes.append(Life(110, map_h - 50))
     server.lifes.append(Life(170, map_h - 50))
 
-    # game_world.add_collision_pairs(server.hero, server.stage1, 'hero:stage1')
+    game_world.add_collision_pairs(server.hero, server.stage1, 'hero:stage1')
 
 
     for i in server.lifes:
@@ -64,13 +84,12 @@ def update():
 
     for a, b, group in game_world.all_collision_pairs():
         if collide(a, b):
-            print('COLLISION ', group)
             a.handle_collision(b, group)
             b.handle_collision(a, group)
 
-        if map_collide(a, b):
-            a.map_handle_collision(b, group)
-            b.map_handle_collision(a, group)
+        # if map_collide(a, b):
+        #     a.map_handle_collision(b, group)
+        #     b.map_handle_collision(a, group)
 
 
 def draw_world():

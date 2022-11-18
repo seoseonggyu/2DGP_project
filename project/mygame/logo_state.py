@@ -4,12 +4,14 @@ import play_state
 import title_state
 
 # running = True
-image = None
+image_enter = None
+image_background = None
 logo_time = 0.0
 
 def enter():
-    global image
-    image = load_image('tuk_credit.png')
+    global image_enter, image_background
+    image_enter = load_image('logo_enter.png')
+    image_background = load_image('logo_background.png')
     pass
 
 def exit():

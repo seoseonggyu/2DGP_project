@@ -1,4 +1,14 @@
 hero = None
 enemy1 = None
+enemy2 = None
+enemy3 = None
+enemy4 = None
+enemy5 = None
+enemy6 = None
+enemy7 = None
+enemy8 = None
+enemy9 = None
+enemy10 = None
 lifes = []
 stage1 = None
+shots = []

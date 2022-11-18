@@ -22,7 +22,6 @@ class Map1:
         self.map_crash = False
 
 
-
     def update(self):
         if self.map_crash == False:
             self.x += -server.hero.dir * RUN_SPEED_PPS * game_framework.frame_time
@@ -33,6 +32,7 @@ class Map1:
         self.image_background.draw(1000, 600, 3000, 4000)
         self.image.draw(self.x, self.y, 3000, 2200)
         draw_rectangle(*self.get_bb())
+
 
     def get_bb(self):
         return self.x - 1420, self.y - 1030, self.x + 1420, self.y + 1130

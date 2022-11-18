@@ -1,6 +1,3 @@
-
-# layer 0: Background Objects
-# layer 1: Foreground Objects
 objects = [[], []]
 
 collision_group = dict()
