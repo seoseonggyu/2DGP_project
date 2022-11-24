@@ -1,7 +1,19 @@
 from pico2d import *
 import game_world
 import math
+import game_framework
 import server
+
+PIXEL_PER_METER = (10.0 / 0.01) # 10 pixel 30 cm
+RUN_SPEED_KMPH = 3 # Km / Hour
+RUN_SPEED_MPM = (RUN_SPEED_KMPH * 1000.0 / 60.0)
+RUN_SPEED_MPS = (RUN_SPEED_MPM / 60.0)
+RUN_SPEED_PPS = (RUN_SPEED_MPS * PIXEL_PER_METER)
+
+TIME_PER_ACTION = 0.7
+ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
+FRAMES_PER_ACTION = 6
+
 
 class Bullet:
     image = None
@@ -9,15 +21,8 @@ class Bullet:
     def __init__(self, mousex, mousey, posx, posy, speed):
         if Bullet.image == None:
             Bullet.image = load_image('bullet.png')
-        self.x = posx
-        self.y = posy
-        self.dir = (mousex - posx, mousey- posy)
-
-        length = math.hypot(*self.dir)
-        if length == 0.0:
-            self.dir = (0, -1)
-        else:
-            self.dir = (self.dir[0] / length, self.dir[1] / length)
+        self.x, self.y = 1000, 600
+        self.dir = math.atan2(mousey - posy, mousex - posx)
 
         self.speed = speed
 
@@ -26,8 +31,8 @@ class Bullet:
         draw_rectangle(*self.get_bb())
 
     def update(self):
-        self.x = self.x + self.dir[0] * self.speed
-        self.y = self.y + self.dir[1] * self.speed
+        self.x += self.speed * math.cos(self.dir) * game_framework.frame_time -server.hero.dir * RUN_SPEED_PPS * game_framework.frame_time
+        self.y += self.speed * math.sin(self.dir) * game_framework.frame_time -server.hero.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
         if self.x < 50 or self.x > 1950 or self.y < 50 or self.y > 1150:
             game_world.remove_object(self)
@@ -36,9 +41,8 @@ class Bullet:
         return self.x - 20, self.y - 20, self.x + 20, self.y + 20
 
     def handle_collision(self, other, group):
-        if server.enemy1.life == True:
-            if group == 'shots:enemy1':
-                game_world.remove_object(self)
+        if group == 'shots:enemy1':
+            game_world.remove_object(self)
 
 
 

@@ -37,36 +37,14 @@ def enter():
     server.hero = character()
     game_world.add_object(server.hero, 1)
 
-    # Boy() for i in range(11)
-
-    server.enemy1 = Enemy1()
-    server.enemy2 = Enemy1()
-    server.enemy3 = Enemy1()
-    server.enemy4 = Enemy1()
-    server.enemy5 = Enemy1()
-    server.enemy6 = Enemy1()
-    server.enemy7 = Enemy1()
-    server.enemy8 = Enemy1()
-    server.enemy9 = Enemy1()
-    server.enemy10 = Enemy1()
-    game_world.add_object(server.enemy1, 1)
-    game_world.add_object(server.enemy2, 1)
-    game_world.add_object(server.enemy3, 1)
-    game_world.add_object(server.enemy4, 1)
-    game_world.add_object(server.enemy5, 1)
-    game_world.add_object(server.enemy6, 1)
-    game_world.add_object(server.enemy7, 1)
-    game_world.add_object(server.enemy8, 1)
-    game_world.add_object(server.enemy9, 1)
-    game_world.add_object(server.enemy10, 1)
-
+    server.enemy1_list = [Enemy1() for i in range(10)]
+    game_world.add_objects(server.enemy1_list, 1)
 
     server.lifes.append(Life(50, map_h - 50))
     server.lifes.append(Life(110, map_h - 50))
     server.lifes.append(Life(170, map_h - 50))
 
-    game_world.add_collision_pairs(server.hero, server.stage1, 'hero:stage1')
-
+    game_world.add_collision_pairs(None, server.enemy1_list, 'shots:enemy1')
 
     for i in server.lifes:
         game_world.add_object(i, 0)
