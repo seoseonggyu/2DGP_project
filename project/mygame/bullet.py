@@ -16,18 +16,20 @@ FRAMES_PER_ACTION = 6
 
 
 class Bullet:
-    image = None
-
+    basic_image = None
+    thin_bullet = None
     def __init__(self, mousex, mousey, posx, posy, speed):
-        if Bullet.image == None:
-            Bullet.image = load_image('bullet.png')
+        if Bullet.basic_image == None:
+            Bullet.basic_image = load_image('basic_bullet.png')
+        if Bullet.thin_bullet == None:
+            Bullet.thin_bullet = load_image('basic_bullet.png')
         self.x, self.y = 1000, 600
         self.dir = math.atan2(mousey - posy, mousex - posx)
 
         self.speed = speed
 
     def draw(self):
-        self.image.draw(self.x, self.y, 30, 30)
+        self.basic_image.draw(self.x, self.y, 30, 30)
         draw_rectangle(*self.get_bb())
 
     def update(self):

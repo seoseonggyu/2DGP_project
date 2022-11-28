@@ -8,7 +8,7 @@ from enemy import Enemy1
 from map1 import Map1
 
 import server
-from collision import *
+from function import collide
 
 import title_state
 import logo_state
@@ -64,11 +64,6 @@ def update():
         if collide(a, b):
             a.handle_collision(b, group)
             b.handle_collision(a, group)
-
-        # if map_collide(a, b):
-        #     a.map_handle_collision(b, group)
-        #     b.map_handle_collision(a, group)
-
 
 def draw_world():
     for game_object in game_world.all_objects():

@@ -37,9 +37,6 @@ class Map1:
     def get_bb(self):
         return self.x - 1420, self.y - 1030, self.x + 1420, self.y + 1130
 
-    def map_handle_collision(self, other, group):
-        if group == 'hero:stage1':
-            self.map_crash = True
 
 
     def handle_collision(self, other, group):

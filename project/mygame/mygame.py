@@ -2,6 +2,7 @@ import pico2d
 import game_framework
 import play_state
 import title_state
+from server import map_w, map_h
 
 map_w = 2000
 map_h = 1200
