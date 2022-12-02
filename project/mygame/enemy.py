@@ -25,10 +25,13 @@ FRAMES_PER_ACTION = 6
 class Enemy1:
     image_idle = None
     image_attack = None
+    image_item = None
 
     def __init__(self):
         if Enemy1.image_idle == None:
             Enemy1.image_idle = load_image('enemy1_idle.png')
+        if Enemy1.image_item == None:
+            Enemy1.image_item = load_image('item.png')
         self.x, self.y = random.randint(2000, 3000), random.randint(100, 1200)
         self.hp = 100
         self.frame = 0
@@ -40,6 +43,7 @@ class Enemy1:
         self.y -= server.hero.dir2 * RUN_SPEED_PPS * game_framework.frame_time
 
         if self.hp <= 0:
+            server.hero.item_count += 1
             game_world.remove_object(self)
 
     def draw(self):
@@ -52,7 +56,8 @@ class Enemy1:
 
     def handle_collision(self, other, group):
         if group == 'shots:enemy1':
-            self.hp -= 10
+            self.hp -= 100
+
 
 
 
