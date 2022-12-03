@@ -223,7 +223,6 @@ class WEAPON_RUN:
         self.font.draw(50, 1200 - 120, '%7d' % self.item_count, (255, 255, 255))
 
 
-
 # 42 , 41
 # class JUMP:
 #     def enter(self, event): # 상태에 들어갈 때 행하는 액션
@@ -270,15 +269,17 @@ class character:
         self.font = load_font('ENCR10B.TTF', 16)
         self.mouse_angle = 0
         self.x, self.y = image_center_w, image_center_h # 캐릭터 좌표
+
         self.mouse_x, self.mouse_y = 0, 0 # 마우스 좌표
         self.frame = 0
         self.way = 0
         self.attack_count = 0
-        self.timer = 1000
+        self.timer = 50
         self.dir, self.dir2 = 0, 0
         self.face_dir = 0
 
         self.font = load_font('ENCR10B.TTF', 16)
+        self.font2 = load_font('ENCR10B.TTF', 16)
         self.item_count = 0
 
         self.finish_jump = False
@@ -320,6 +321,8 @@ class character:
         draw_rectangle(*self.get_bb())
 
         self.font.draw(self.x - 40, self.y + 80, 'counter: %d' % (self.attack_count), (255, 255, 0))
+        self.font2.draw(self.x - 40, self.y + 120, '%d' % self.x, (255, 255, 255))
+
 
     def fire_shot(self):
         shots = Bullet(self.mouse_x, self.mouse_y, self.x, self.y, 2 * RUN_SPEED_PPS)
@@ -330,7 +333,7 @@ class character:
         self.timer -= 1
         if self.timer == 0:
             self.attack_count = 0
-            self.timer = 1000
+            self.timer = 50
 
     def get_bb(self):
         return self.x - 30, self.y - 30, self.x + 30, self.y + 35

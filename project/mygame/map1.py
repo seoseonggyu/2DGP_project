@@ -19,17 +19,18 @@ class Map1:
         self.image = load_image('map1.png')
         self.image_background = load_image('background.png')
         self.x, self.y = 1800, 1000
+        self.font = load_font('ENCR10B.TTF', 16)
 
 
     def update(self):
         self.x += -server.hero.dir * RUN_SPEED_PPS * game_framework.frame_time
         self.y += -server.hero.dir2 * RUN_SPEED_PPS * game_framework.frame_time
-
+        self.x = clamp(-370, self.x, 2370)
+        self.y = clamp(50, self.y, 1570)
 
     def draw(self):
         self.image_background.draw(1000, 600, 3000, 4000)
         self.image.draw(self.x, self.y, 3000, 2200)
-        pass
 
 
     def get_bb(self):
