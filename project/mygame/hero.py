@@ -274,7 +274,7 @@ class character:
         self.frame = 0
         self.way = 0
         self.attack_count = 0
-        self.timer = 50
+        self.timer = 500
         self.dir, self.dir2 = 0, 0
         self.face_dir = 0
 
@@ -333,7 +333,7 @@ class character:
         self.timer -= 1
         if self.timer == 0:
             self.attack_count = 0
-            self.timer = 50
+            self.timer = 500
 
     def get_bb(self):
         return self.x - 30, self.y - 30, self.x + 30, self.y + 35

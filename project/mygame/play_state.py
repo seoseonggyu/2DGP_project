@@ -37,7 +37,7 @@ def enter():
     server.hero = character()
     game_world.add_object(server.hero, 1)
 
-    server.enemy1_list = [Enemy1() for i in range(1)]
+    server.enemy1_list = [Enemy1() for i in range(10)]
     game_world.add_objects(server.enemy1_list, 1)
 
     server.lifes.append(Life(50, map_h - 50))

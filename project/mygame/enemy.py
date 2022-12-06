@@ -22,14 +22,14 @@ TIME_PER_ACTION = 0.7
 ACTION_PER_TIME = 1.0 / TIME_PER_ACTION
 FRAMES_PER_ACTION = 6
 
-class TargetMarker:
-    def __init__(self, x=0, y=0):
-        self.x, self.y = x, y
-        self.image = load_image('hand_arrow.png')
-    def update(self):
-        pass
-    def draw(self):
-        self.image.draw(self.x, self.y, 50, 50)
+# class TargetMarker:
+#     def __init__(self, x=0, y=0):
+#         self.x, self.y = x, y
+#         self.image = load_image('hand_arrow.png')
+#     def update(self):
+#         pass
+#     def draw(self):
+#         self.image.draw(self.x, self.y, 50, 50)
 
 
 class Enemy1:
@@ -42,17 +42,17 @@ class Enemy1:
             Enemy1.image_idle = load_image('enemy1_idle.png')
         if Enemy1.image_item == None:
             Enemy1.image_item = load_image('item.png')
-        # self.x, self.y = random.randint(2000, 3000), random.randint(100, 1200)
-        self.x, self.y = 2500, 1000
+        self.x, self.y = random.randint(1500, 3000), random.randint(100, 1200)
+        # self.x, self.y = 2500, 1000
         self.tx, self.ty = 2500, 1000
         self.dir = random.random() * 2 * math.pi
         self.speed = 0
         self.timer = 1.0
-        self.build_behavior_tree()
+        # self.build_behavior_tree()
         self.way = 0
 
-        self.target_marker = TargetMarker(self.tx, self.ty)
-        game_world.add_object(self.target_marker, 1)
+        # self.target_marker = TargetMarker(self.tx, self.ty)
+        # game_world.add_object(self.target_marker, 1)
 
 
         self.hp = 100
@@ -67,7 +67,7 @@ class Enemy1:
         self.frame = (self.frame + FRAMES_PER_ACTION * ACTION_PER_TIME * game_framework.frame_time) % 4
         self.x -= server.hero.dir * RUN_SPEED_PPS * game_framework.frame_time
         self.y -= server.hero.dir2 * RUN_SPEED_PPS * game_framework.frame_time
-        self.bt.run()
+        # self.bt.run()
 
         # if self.x - server.hero.x > 0:
         #     self.way = 0
@@ -117,8 +117,8 @@ class Enemy1:
         move_to_node = LeafNode('Move To', self.move_to)
         play_beep_node = LeafNode('Play Beep', self.play_beep)
 
-        wander_sequence = SequenceNode('Wander', find_random_location_node, move_to_node, play_beep_node)
-        self.bt = BehaviorTree(wander_sequence)
+        # wander_sequence = SequenceNode('Wander', find_random_location_node, move_to_node, play_beep_node)
+        # self.bt = BehaviorTree(wander_sequence)
 
         pass
 
